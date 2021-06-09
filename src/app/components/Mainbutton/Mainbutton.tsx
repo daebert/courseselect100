@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
-import styles from "./Mainbutton.module.css";
+import styles from "./MainButton.module.css";
 
-type MainbuttonProps = {
+type MainButtonProps = {
   children: ReactNode;
 };
 
-function Mainbutton({ children }: MainbuttonProps): JSX.Element {
+function MainButton({ children }: MainButtonProps): JSX.Element {
   return <button className={styles.button}>{children}</button>;
 }
 
-export default Mainbutton;
+export default MainButton;

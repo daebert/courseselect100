@@ -1,12 +1,12 @@
 import React from "react";
-import Mainbutton from "./Mainbutton";
+import MainButton from "./MainButton";
 
 export default {
-  title: "Component/Mainbutton",
-  component: Mainbutton,
+  title: "Component/MainButton",
+  component: MainButton,
 };
 
-export const Send = (): JSX.Element => <Mainbutton>Senden</Mainbutton>;
+export const Send = (): JSX.Element => <MainButton>Senden</MainButton>;
 export const SelectCourse = (): JSX.Element => (
-  <Mainbutton>Kurs wählen</Mainbutton>
+  <MainButton>Kurs wählen</MainButton>
 );
