@@ -1,6 +1,6 @@
 .img {
-  width: 10em;
-  height: 10em;
+  width: 5em;
+  height: 5em;
   border-radius: 100%;
-  border: 0.3em solid var(--primary-border-color);
+  border: 0.1em solid var(--primary-border-color);
 }
