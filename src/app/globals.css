@@ -7,6 +7,7 @@
 :root {
   /* FONTS */
   --font-family: "Roboto", sans-serif;
+  --letter-spacing: 0.05em;
 
   /* COLORS */
   --primary-color: #6446b8;
@@ -18,6 +19,18 @@
 
   /* SIZES */
   --font-size: 100%;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  letter-spacing: var(--letter-spacing);
 }
 
 h1 {

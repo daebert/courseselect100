@@ -1,0 +1,13 @@
+.backButton {
+  font-family: var(--font-family);
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.25em;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.25em;
+}

@@ -8,7 +8,7 @@ export default {
 
 export const Basketball = (): JSX.Element => (
   <CourseCard
-    imgSrc="./Basketball.png"
+    imgSrc="./Images/Basketball.png"
     headline="Basketball"
     body="Hier kann man Basketball spielen und tolle Tricks lernen!"
   />
