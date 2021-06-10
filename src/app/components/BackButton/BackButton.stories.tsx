@@ -1,6 +1,6 @@
 import React from "react";
 import BackButton from "./BackButton";
-import BackArrowIcon from "../../assets/Icons/BackArrowIcon";
+import BackArrowIcon from "../../assets/icons/BackArrowIcon";
 
 export default {
   title: "Component/BackButton",
