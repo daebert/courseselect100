@@ -7,5 +7,5 @@ export default {
 };
 
 export const BasketballImage = (): JSX.Element => (
-  <RoundImage imageSrc="./images/basketball.png" />
+  <RoundImage imageSrc="/images/basketball.png" />
 );
