@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./CourseChoice.module.css";
+import BinIcon from "../../assets/icons/BinIcon";
 
 type CourseChoiceProps = {
   prioIcon: React.SVGProps<SVGSVGElement>;
@@ -10,13 +11,12 @@ type CourseChoiceProps = {
 function CourseChoice({
   prioIcon,
   courseChoice,
-  binIcon,
 }: CourseChoiceProps): JSX.Element {
   return (
     <div className={styles.courseChoice}>
       <span>{prioIcon}</span>
       <span>{courseChoice}</span>
-      <span>{binIcon}</span>
+      {<BinIcon />}
     </div>
   );
 }

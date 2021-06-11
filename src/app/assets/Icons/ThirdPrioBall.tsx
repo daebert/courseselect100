@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SecPrioIcon(): JSX.Element {
+export default function ThirdPrioBall(): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,8 @@ export default function SecPrioIcon(): JSX.Element {
       <g transform="translate(-811 120)">
         <g
           transform="translate(811 -120)"
-          fill="#afa1bf"
-          stroke="#afa1bf"
+          fill="#ff9b7a"
+          stroke="#ff9b7a"
           stroke-width="1"
         >
           <circle cx="25" cy="25" r="25" stroke="none" />
@@ -20,13 +20,13 @@ export default function SecPrioIcon(): JSX.Element {
         </g>
         <text
           transform="translate(836 -87)"
-          fill="#fff"
+          fill="var(--contrast-text-color)"
           font-size="20"
           font-family="Roboto-Bold, Roboto"
           font-weight="700"
         >
           <tspan x="-5.737" y="0">
-            2
+            3
           </tspan>
         </text>
       </g>

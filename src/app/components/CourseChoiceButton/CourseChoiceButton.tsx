@@ -1,14 +1,12 @@
 import React, { ReactNode } from "react";
 import styles from "./CourseChoiceButton.module.css";
 
-type CourseChoiceButtonProps = {
+type ButtonProps = {
   children: ReactNode;
 };
 
-function CourseChoiceButton({
-  children,
-}: CourseChoiceButtonProps): JSX.Element {
-  return <button className={styles.button}> {children}</button>;
+function Button({ children }: ButtonProps): JSX.Element {
+  return <button className={styles.button}>{children}</button>;
 }
 
-export default CourseChoiceButton;
+export default Button;

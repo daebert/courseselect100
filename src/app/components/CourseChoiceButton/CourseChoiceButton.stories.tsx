@@ -1,11 +1,11 @@
 import React from "react";
-import CourseChoiceButton from "./CourseChoiceButton";
+import Button from "./CourseChoiceButton";
 
 export default {
   title: "Component/CourseChoiceButton",
-  component: CourseChoiceButton,
+  component: Button,
 };
 
 export const CourseChoice = (): JSX.Element => (
-  <CourseChoiceButton>Hier klicken für Kurswahl</CourseChoiceButton>
+  <Button>Hier klicken für Kurswahl</Button>
 );
