@@ -7,21 +7,23 @@ import RoundImage from "../RoundImage/RoundImage";
 
 function CourseDetailHeader(): JSX.Element {
   return (
-    <div className={styles.container}>
-      <section>
+    <div className={styles.header}>
+      <section className={styles.header__image}>
         <RoundImage imageSrc="/images/basketball.png" />
       </section>
-      <section>Basketball</section>
-      <section>Leitung: Peter Lustig</section>
-      <section>
-        Jahrgang
-        <ClassBallNo />
-        <ClassBallNo />
-        <ClassBallNo />
-        <ClassBallSingleDigit num="8" />
-        <ClassBallSingleDigit num="9" />
-        <ClassBallDoubleDigit num="10" />
-        <ClassBallDoubleDigit num="11" />
+      <section className={styles.header__text}>
+        <h1>Basketball</h1>
+        <span className={styles.header__text__body}>Leitung: Peter Lustig</span>
+        <section className={styles.header__text__classes}>
+          Jg
+          <ClassBallNo />
+          <ClassBallNo />
+          <ClassBallNo />
+          <ClassBallSingleDigit num="8" />
+          <ClassBallSingleDigit num="9" />
+          <ClassBallDoubleDigit num="10" />
+          <ClassBallDoubleDigit num="11" />
+        </section>
       </section>
     </div>
   );
