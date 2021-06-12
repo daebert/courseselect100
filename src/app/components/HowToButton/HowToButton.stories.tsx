@@ -1,11 +1,11 @@
 import React from "react";
-import Button from "./HowToButton";
+import HowToButton from "./HowToButton";
 
 export default {
   title: "Component/HowToButton",
-  component: Button,
+  component: HowToButton,
 };
 
-export const HowToButton = (): JSX.Element => (
-  <Button>Wie es funktioniert!</Button>
+export const Button = (): JSX.Element => (
+  <HowToButton>Wie es funktioniert!</HowToButton>
 );

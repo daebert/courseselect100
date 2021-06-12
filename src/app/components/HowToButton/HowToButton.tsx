@@ -6,7 +6,7 @@ type ButtonProps = {
   children: ReactNode;
 };
 
-function Button({ children }: ButtonProps): JSX.Element {
+function HowToButton({ children }: ButtonProps): JSX.Element {
   return (
     <button className={styles.button}>
       <span>{children}</span>
@@ -15,4 +15,4 @@ function Button({ children }: ButtonProps): JSX.Element {
   );
 }
 
-export default Button;
+export default HowToButton;
