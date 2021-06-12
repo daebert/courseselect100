@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ClassBalls.module.css";
-import ClassBallYes from "../../assets/icons/ClassBallYes";
+import ClassBallSingleDigit from "../../assets/icons/ClassBallSingleDigit";
+import ClassBallDoubleDigit from "../../assets/icons/ClassBallDoubleDigit";
 import ClassBallNo from "../../assets/icons/ClassBallNo";
 
 function ClassBalls(): JSX.Element {
@@ -9,10 +10,10 @@ function ClassBalls(): JSX.Element {
       <ClassBallNo />
       <ClassBallNo />
       <ClassBallNo />
-      <ClassBallYes num="8" />
-      <ClassBallYes num="9" />
-      <ClassBallYes num="10" />
-      <ClassBallYes num="11" />
+      <ClassBallSingleDigit num="8" />
+      <ClassBallSingleDigit num="9" />
+      <ClassBallDoubleDigit num="10" />
+      <ClassBallDoubleDigit num="11" />
     </div>
   );
 }

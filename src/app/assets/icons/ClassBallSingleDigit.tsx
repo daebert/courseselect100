@@ -4,7 +4,9 @@ type ClassBallProps = {
   num: string;
 };
 
-export default function ClassBallYes({ num }: ClassBallProps): JSX.Element {
+export default function ClassBallSingleDigit({
+  num,
+}: ClassBallProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -21,15 +23,13 @@ export default function ClassBallYes({ num }: ClassBallProps): JSX.Element {
         <circle cx="12.5" cy="12.5" r="12" fill="none" />
       </g>
       <text
-        id="_11"
-        data-name="11"
-        transform="translate(0 2)"
+        transform="translate(12 19)"
         fill="var(--contrast-text-color)"
         font-size="16"
         font-family="Roboto-Regular, Roboto"
         letter-spacing="0.025em"
       >
-        <tspan x="-9.184" y="17">
+        <tspan x="-4.492" y="0">
           {num}
         </tspan>
       </text>
