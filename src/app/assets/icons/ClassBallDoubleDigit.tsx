@@ -15,8 +15,6 @@ export default function ClassBallDoubleDigit({
       viewBox="0 0 25 25"
     >
       <g
-        id="Ellipse_3"
-        data-name="Ellipse 3"
         fill="var(--primary-color)"
         stroke="var(--primary-color)"
         stroke-width="1"

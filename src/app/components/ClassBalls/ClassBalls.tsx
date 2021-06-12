@@ -1,12 +1,11 @@
 import React from "react";
-import styles from "./ClassBalls.module.css";
 import ClassBallSingleDigit from "../../assets/icons/ClassBallSingleDigit";
 import ClassBallDoubleDigit from "../../assets/icons/ClassBallDoubleDigit";
 import ClassBallNo from "../../assets/icons/ClassBallNo";
 
 function ClassBalls(): JSX.Element {
   return (
-    <div className={styles.classBalls}>
+    <div>
       <ClassBallNo />
       <ClassBallNo />
       <ClassBallNo />
