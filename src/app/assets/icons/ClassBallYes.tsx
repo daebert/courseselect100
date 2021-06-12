@@ -1,7 +1,7 @@
 import React from "react";
 
 type ClassBallProps = {
-  num: number;
+  num: string;
 };
 
 export default function ClassBallYes({ num }: ClassBallProps): JSX.Element {
