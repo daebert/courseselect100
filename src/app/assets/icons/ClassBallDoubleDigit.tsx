@@ -1,11 +1,11 @@
 import React from "react";
 
 type ClassBallProps = {
-  num: string;
+  course: string;
 };
 
 export default function ClassBallDoubleDigit({
-  num,
+  course,
 }: ClassBallProps): JSX.Element {
   return (
     <svg
@@ -30,7 +30,7 @@ export default function ClassBallDoubleDigit({
         letter-spacing="0.025em"
       >
         <tspan x="-9.184" y="0">
-          {num}
+          {course}
         </tspan>
       </text>
     </svg>

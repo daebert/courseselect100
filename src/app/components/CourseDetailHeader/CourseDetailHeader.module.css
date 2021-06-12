@@ -18,11 +18,11 @@
   grid-column: 2/3;
 }
 
-.header__text__body {
+.header__body {
   margin-bottom: 0.25em;
 }
 
-.header__text__classes {
+.header__classes {
   display: flex;
   align-items: center;
   column-gap: 0.1em;
