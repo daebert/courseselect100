@@ -6,14 +6,8 @@ export default {
   component: CourseChoice,
 };
 
-export const firstChoice = (): JSX.Element => (
-  <CourseChoice prio="primary" courseChoice="Tanzen" />
-);
+export const firstChoice = (): JSX.Element => <CourseChoice prio="primary" />;
 
-export const secChoice = (): JSX.Element => (
-  <CourseChoice prio="secondary" courseChoice="Singen" />
-);
+export const secChoice = (): JSX.Element => <CourseChoice prio="secondary" />;
 
-export const thirdChoice = (): JSX.Element => (
-  <CourseChoice prio="tertiary" courseChoice="Basketball" />
-);
+export const thirdChoice = (): JSX.Element => <CourseChoice prio="tertiary" />;
