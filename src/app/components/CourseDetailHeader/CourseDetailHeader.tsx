@@ -19,10 +19,10 @@ function CourseDetailHeader(): JSX.Element {
           <ClassBallNo />
           <ClassBallNo />
           <ClassBallNo />
-          <ClassBallSingleDigit num="8" />
-          <ClassBallSingleDigit num="9" />
-          <ClassBallDoubleDigit num="10" />
-          <ClassBallDoubleDigit num="11" />
+          <ClassBallSingleDigit course="8" />
+          <ClassBallSingleDigit course="9" />
+          <ClassBallDoubleDigit course="10" />
+          <ClassBallDoubleDigit course="11" />
         </section>
       </section>
     </header>
