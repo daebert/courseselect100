@@ -1,11 +1,11 @@
 import React from "react";
 
 type ClassBallProps = {
-  num: string;
+  course: string;
 };
 
 export default function ClassBallSingleDigit({
-  num,
+  course,
 }: ClassBallProps): JSX.Element {
   return (
     <svg
@@ -30,7 +30,7 @@ export default function ClassBallSingleDigit({
         letter-spacing="0.025em"
       >
         <tspan x="-4.492" y="0">
-          {num}
+          {course}
         </tspan>
       </text>
     </svg>
