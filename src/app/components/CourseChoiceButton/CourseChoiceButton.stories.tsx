@@ -6,6 +6,4 @@ export default {
   component: Button,
 };
 
-export const CourseChoice = (): JSX.Element => (
-  <Button>Hier klicken für Kurswahl</Button>
-);
+export const CourseChoice = (): JSX.Element => <Button />;
