@@ -1,13 +1,38 @@
 import React from "react";
 import CourseChoice from "./CourseChoice";
+import Button from "../CourseChoiceButton/CourseChoiceButton";
+import CourseChoiceChosen from "../CourseChoiceChosen/CourseChoiceChosen";
 
 export default {
   title: "Component/CourseChoice",
   component: CourseChoice,
 };
 
-export const firstChoice = (): JSX.Element => <CourseChoice prio="primary" />;
+type ChoiceProps = {
+  priority: string;
+};
 
-export const secChoice = (): JSX.Element => <CourseChoice prio="secondary" />;
+function Choice({ priority }: ChoiceProps): JSX.Element {
+  if (priority === "") {
+    return <Button />;
+  } else {
+    return <CourseChoiceChosen courseChoiceChosen="Tanzen" />;
+  }
+}
 
-export const thirdChoice = (): JSX.Element => <CourseChoice prio="tertiary" />;
+const courseChoiceObject = {
+  first: "",
+  second: "",
+  third: "",
+};
+
+export const firstChoice = (): JSX.Element => (
+  <CourseChoice
+    prio="primary"
+    condition={<Choice priority="courseChoiceObject.first" />}
+  />
+);
+
+// export const secChoice = (): JSX.Element => <CourseChoice prio="secondary" />;
+
+// export const thirdChoice = (): JSX.Element => <CourseChoice prio="tertiary" />;

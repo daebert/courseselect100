@@ -3,10 +3,9 @@ import styles from "./CourseChoice.module.css";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
-import Button from "../CourseChoiceButton/CourseChoiceButton";
-import CourseChoiceChosen from "../CourseChoiceChosen/CourseChoiceChosen";
 
 type CourseChoiceProps = {
+  condition: JSX.Element;
   prio: "primary" | "secondary" | "tertiary";
 };
 
@@ -16,31 +15,29 @@ const priorities = {
   tertiary: { icon: <ThirdPrioBall /> },
 };
 
-const courseChoiceObject = {
-  first: "",
-  second: "",
-  third: "",
-};
+// const courseChoiceObject = {
+//   first: "",
+//   second: "",
+//   third: "",
+// };
 
-function Condition(): JSX.Element {
-  if (
-    courseChoiceObject.first === "" &&
-    courseChoiceObject.second === "" &&
-    courseChoiceObject.third === ""
-  ) {
-    return <Button />;
-  } else {
-    return <CourseChoiceChosen courseChoiceChosen="Tanzen" />;
-  }
-}
+// function Condition(): JSX.Element {
+//   if (
+//     courseChoiceObject.first === "" &&
+//     courseChoiceObject.second === "" &&
+//     courseChoiceObject.third === ""
+//   ) {
+//     return <Button />;
+//   } else {
+//     return <CourseChoiceChosen courseChoiceChosen="Tanzen" />;
+//   }
+// }
 
-function CourseChoice({ prio }: CourseChoiceProps): JSX.Element {
+function CourseChoice({ prio, condition }: CourseChoiceProps): JSX.Element {
   return (
     <div className={styles.courseChoice}>
       <span>{priorities[prio].icon}</span>
-      <span>
-        <Condition />
-      </span>
+      <span>{condition}</span>
     </div>
   );
 }
