@@ -22,7 +22,7 @@ function Home(): JSX.Element {
         </div>
       </main>
       <footer>
-        <MainButton children="Senden" />
+        <MainButton choice={true}>Senden</MainButton>
       </footer>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import styles from "./MainButton.module.css";
 
 type MainButtonProps = {
@@ -8,7 +9,11 @@ type MainButtonProps = {
 
 function MainButton({ children, choice }: MainButtonProps): JSX.Element {
   return (
-    <button disabled={!choice} className={styles.button}>
+    <button
+      className={styles.button}
+      disabled={!choice}
+      onClick={() => <Link to="#" />}
+    >
       {children}
     </button>
   );
