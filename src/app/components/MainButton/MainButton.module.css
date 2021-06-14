@@ -8,3 +8,9 @@
   width: 100%;
   padding: 1em 1.5em;
 }
+
+:disabled {
+  color: grey;
+  opacity: 0.7;
+  cursor: default;
+}

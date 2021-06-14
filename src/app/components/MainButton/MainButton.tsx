@@ -6,7 +6,11 @@ type MainButtonProps = {
 };
 
 function MainButton({ children }: MainButtonProps): JSX.Element {
-  return <button className={styles.button}>{children}</button>;
+  return (
+    <button disabled className={styles.button}>
+      {children}
+    </button>
+  );
 }
 
 export default MainButton;
