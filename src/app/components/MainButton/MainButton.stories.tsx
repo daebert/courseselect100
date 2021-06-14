@@ -6,7 +6,9 @@ export default {
   component: MainButton,
 };
 
-export const Send = (): JSX.Element => <MainButton>Senden</MainButton>;
+export const Send = (): JSX.Element => (
+  <MainButton choice={true}>Senden</MainButton>
+);
 export const SelectCourse = (): JSX.Element => (
-  <MainButton>Kurs wählen</MainButton>
+  <MainButton choice={true}>Kurs wählen</MainButton>
 );

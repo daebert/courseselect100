@@ -3,11 +3,12 @@ import styles from "./MainButton.module.css";
 
 type MainButtonProps = {
   children: ReactNode;
+  choice: boolean;
 };
 
-function MainButton({ children }: MainButtonProps): JSX.Element {
+function MainButton({ children, choice }: MainButtonProps): JSX.Element {
   return (
-    <button disabled className={styles.button}>
+    <button disabled={!choice} className={styles.button}>
       {children}
     </button>
   );

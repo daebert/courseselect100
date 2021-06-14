@@ -6,10 +6,6 @@ export default {
   component: CourseChoice,
 };
 
-type ChoiceProps = {
-  priority: string;
-};
-
 export const firstChoice = (): JSX.Element => (
   <CourseChoice prio="primary" name="Tanzen" />
 );
