@@ -1,5 +1,7 @@
 .container {
   height: 100vh;
+  display: grid;
+  grid-template-rows: 2fr 4fr auto;
 }
 
 .greatingName {
@@ -7,6 +9,10 @@
 }
 
 .main {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+}
+
+.courseChoiceBlock {
+  background-color: hotpink;
 }

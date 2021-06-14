@@ -15,7 +15,7 @@ function Home(): JSX.Element {
       </header>
       <main className={styles.main}>
         <h1>Meine Kursprioritäten</h1>
-        <div>
+        <div className={styles.courseChoiceblock}>
           <CourseChoice prio="primary" name="Tanzen" />
           <CourseChoice prio="secondary" name="" />
           <CourseChoice prio="tertiary" name="" />
