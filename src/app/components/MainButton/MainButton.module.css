@@ -10,7 +10,7 @@
 }
 
 :disabled {
-  color: grey;
-  opacity: 0.7;
+  color: #afa1bf;
+  opacity: 0.3;
   cursor: default;
 }

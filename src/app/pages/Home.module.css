@@ -1,3 +1,12 @@
+.container {
+  height: 100vh;
+}
+
 .greatingName {
   font-weight: bold;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
 }

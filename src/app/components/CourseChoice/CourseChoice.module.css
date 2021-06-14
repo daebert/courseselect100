@@ -1,9 +1,9 @@
 .courseChoice {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
   column-gap: 0.5em;
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.25em;

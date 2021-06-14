@@ -13,16 +13,16 @@ function Home(): JSX.Element {
         Willkommen im Kurswahlsystem!
         <HowToButton />
       </header>
-      <main>
+      <main className={styles.main}>
         <h1>Meine Kursprioritäten</h1>
         <div>
           <CourseChoice prio="primary" name="Tanzen" />
-          <CourseChoice prio="secondary" name="Hüpfen" />
+          <CourseChoice prio="secondary" name="" />
           <CourseChoice prio="tertiary" name="" />
         </div>
       </main>
       <footer>
-        <MainButton choice={true}>Senden</MainButton>
+        <MainButton choice={false}>Senden</MainButton>
       </footer>
     </div>
   );
