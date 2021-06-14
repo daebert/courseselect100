@@ -5,5 +5,5 @@ import BackButton from "./BackButton";
 
 test("renders BackButton", () => {
   render(<BackButton icon={<BackArrowIcon />} />);
-  expect(screen.getByRole("button").innerHTML).toContain("Hallo");
+  expect(screen.getByRole("button").innerHTML).toContain("Zurück");
 });
