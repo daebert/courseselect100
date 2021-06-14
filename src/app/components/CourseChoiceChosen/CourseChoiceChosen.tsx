@@ -3,15 +3,13 @@ import BinIcon from "../../assets/icons/BinIcon";
 import styles from "./CourseChoiceChosen.module.css";
 
 type CourseChoiceChosenProps = {
-  courseChoiceChosen: string;
+  name: string;
 };
 
-function CourseChoiceChosen({
-  courseChoiceChosen,
-}: CourseChoiceChosenProps): JSX.Element {
+function CourseChoiceChosen({ name }: CourseChoiceChosenProps): JSX.Element {
   return (
     <div className={styles.courseChoiceChosen}>
-      <span>{courseChoiceChosen}</span>
+      <span>{name}</span>
       <BinIcon />
     </div>
   );

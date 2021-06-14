@@ -6,6 +6,4 @@ export default {
   component: CourseChoiceChosen,
 };
 
-export const chosen = (): JSX.Element => (
-  <CourseChoiceChosen courseChoiceChosen="Tanzen" />
-);
+export const chosen = (): JSX.Element => <CourseChoiceChosen name="Tanzen" />;

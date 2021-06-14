@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "./CourseChoiceButton";
+import CourseChoiceButton from "./CourseChoiceButton";
 
 export default {
   title: "Component/CourseChoiceButton",
-  component: Button,
+  component: CourseChoiceButton,
 };
 
-export const CourseChoice = (): JSX.Element => <Button />;
+export const CourseChoice = (): JSX.Element => <CourseChoiceButton />;

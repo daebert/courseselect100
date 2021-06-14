@@ -3,10 +3,12 @@ import styles from "./CourseChoice.module.css";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
+import CourseChoiceChosen from "../CourseChoiceChosen/CourseChoiceChosen";
+import CourseChoiceButton from "../CourseChoiceButton/CourseChoiceButton";
 
 type CourseChoiceProps = {
   prio: "primary" | "secondary" | "tertiary";
-  condition: JSX.Element;
+  name: string;
 };
 
 const priorities = {
@@ -15,11 +17,11 @@ const priorities = {
   tertiary: { icon: <ThirdPrioBall /> },
 };
 
-function CourseChoice({ prio, condition }: CourseChoiceProps): JSX.Element {
+function CourseChoice({ prio, name }: CourseChoiceProps): JSX.Element {
   return (
     <div className={styles.courseChoice}>
       <span>{priorities[prio].icon}</span>
-      <span>{condition}</span>
+      {name ? <CourseChoiceChosen name={name} /> : <CourseChoiceButton />}
     </div>
   );
 }
