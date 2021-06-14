@@ -12,27 +12,44 @@ type ChoiceProps = {
   priority: string;
 };
 
-function Choice({ priority }: ChoiceProps): JSX.Element {
-  if (priority === "") {
+const courseChoiceObject = {
+  first: "1",
+  second: "",
+  third: "",
+};
+
+function Choice1(): JSX.Element {
+  if (!courseChoiceObject.first) {
     return <Button />;
   } else {
     return <CourseChoiceChosen courseChoiceChosen="Tanzen" />;
   }
 }
 
-const courseChoiceObject = {
-  first: "",
-  second: "",
-  third: "",
-};
-
 export const firstChoice = (): JSX.Element => (
-  <CourseChoice
-    prio="primary"
-    condition={<Choice priority="courseChoiceObject.first" />}
-  />
+  <CourseChoice prio="primary" condition={<Choice1 />} />
 );
 
-// export const secChoice = (): JSX.Element => <CourseChoice prio="secondary" />;
+function Choice2(): JSX.Element {
+  if (!courseChoiceObject.second) {
+    return <Button />;
+  } else {
+    return <CourseChoiceChosen courseChoiceChosen="Tanzen" />;
+  }
+}
 
-// export const thirdChoice = (): JSX.Element => <CourseChoice prio="tertiary" />;
+export const secChoice = (): JSX.Element => (
+  <CourseChoice prio="secondary" condition={<Choice2 />} />
+);
+
+function Choice3(): JSX.Element {
+  if (!courseChoiceObject.second) {
+    return <Button />;
+  } else {
+    return <CourseChoiceChosen courseChoiceChosen="Tanzen" />;
+  }
+}
+
+export const thirdChoice = (): JSX.Element => (
+  <CourseChoice prio="tertiary" condition={<Choice3 />} />
+);
