@@ -13,8 +13,8 @@ function CourseDetailHeader(): JSX.Element {
       </section>
       <section className={styles.header__text}>
         <h1>Basketball</h1>
-        <span className={styles.header__text__body}>Leitung: Peter Lustig</span>
-        <section className={styles.header__text__classes}>
+        <span className={styles.header__body}>Leitung: Peter Lustig</span>
+        <section className={styles.header__classes}>
           Stufe
           <ClassBallNo />
           <ClassBallNo />

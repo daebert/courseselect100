@@ -7,13 +7,13 @@ export default {
 };
 
 export const firstChoice = (): JSX.Element => (
-  <CourseChoice prio="primary" courseChoice="Tanzen" />
+  <CourseChoice prio="primary" name="Tanzen" />
 );
 
 export const secChoice = (): JSX.Element => (
-  <CourseChoice prio="secondary" courseChoice="Singen" />
+  <CourseChoice prio="secondary" name="Hüpfen" />
 );
 
 export const thirdChoice = (): JSX.Element => (
-  <CourseChoice prio="tertiary" courseChoice="Basketball" />
+  <CourseChoice prio="tertiary" name="" />
 );

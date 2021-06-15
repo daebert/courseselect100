@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./CourseChoice.module.css";
-import BinIcon from "../../assets/icons/BinIcon";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
+import CourseChoiceChosen from "../CourseChoiceChosen/CourseChoiceChosen";
+import ChoiceLink from "../ChoiceLink/ChoiceLink";
 
 type CourseChoiceProps = {
   prio: "primary" | "secondary" | "tertiary";
-  courseChoice: string;
+  name: string;
 };
 
 const priorities = {
@@ -16,12 +17,11 @@ const priorities = {
   tertiary: { icon: <ThirdPrioBall /> },
 };
 
-function CourseChoice({ prio, courseChoice }: CourseChoiceProps): JSX.Element {
+function CourseChoice({ prio, name }: CourseChoiceProps): JSX.Element {
   return (
     <div className={styles.courseChoice}>
       <span>{priorities[prio].icon}</span>
-      <span>{courseChoice}</span>
-      <BinIcon />
+      {name ? <CourseChoiceChosen name={name} /> : <ChoiceLink />}
     </div>
   );
 }

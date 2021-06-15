@@ -4,7 +4,13 @@
   font-size: 2em;
   font-weight: bold;
   border: none;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.5em 0.5em 0 0;
   width: 100%;
   padding: 1em 1.5em;
+}
+
+:disabled {
+  color: #afa1bf;
+  opacity: 0.3;
+  cursor: default;
 }
