@@ -8,6 +8,6 @@
   color: var(--primary-text-color);
   background: #f2edfe;
   border: 0.05em solid var(--primary-border-color);
-  border-radius: 10px;
-  width: 80%;
+  border-radius: 0.5em;
+  width: 100%;
 }

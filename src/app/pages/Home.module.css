@@ -1,0 +1,33 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 10%;
+  width: 90%;
+  margin: auto;
+}
+.greatingName {
+  font-weight: bold;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 90%;
+  margin: auto;
+  height: 90%;
+}
+
+.h1 {
+  font-weight: bold;
+}
+
+.courseChoiceBlock {
+  height: 100%;
+  margin: auto;
+}

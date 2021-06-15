@@ -1,0 +1,9 @@
+.courseChoiceChosen {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  align-items: center;
+  column-gap: 0.5em;
+  width: 100%;
+  margin: auto;
+  font-family: var(--font-family);
+}

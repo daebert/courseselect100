@@ -6,6 +6,4 @@ export default {
   component: HowToButton,
 };
 
-export const Button = (): JSX.Element => (
-  <HowToButton>Wie es funktioniert!</HowToButton>
-);
+export const Button = (): JSX.Element => <HowToButton />;

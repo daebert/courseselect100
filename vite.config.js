@@ -16,6 +16,7 @@ export default defineConfig({
       },
     },
   },
+  publicDir: "src/app/assets/images",
   build: {
     outDir: "dist/app",
   },
