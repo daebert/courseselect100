@@ -1,9 +1,0 @@
-.button {
-  color: var(--contrast-text-color);
-  background: var(--primary-color);
-  font-size: 1em;
-  border: none;
-  border-radius: 10px;
-  height: 2.5em;
-  padding: 0 0.5em;
-}
