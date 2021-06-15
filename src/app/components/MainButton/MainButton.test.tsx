@@ -7,7 +7,7 @@ import {
 import MainButton from "./MainButton";
 
 test("renders Start Button", () => {
-  render(<MainButton choice={false}>Senden</MainButton>);
+  render(<MainButton disabled={false}>Senden</MainButton>);
   expect(screen.getByRole("button").innerHTML).toContain("Senden");
 });
 
