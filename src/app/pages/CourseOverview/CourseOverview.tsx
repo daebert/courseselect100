@@ -1,9 +1,9 @@
 import React from "react";
-import PrimPrioBall from "../assets/icons/PrimPrioBall";
-import SecPrioBall from "../assets/icons/SecPrioBall";
-import ThirdPrioBall from "../assets/icons/ThirdPrioBall";
-import BackButton from "../components/BackButton/BackButton";
-import CourseCard from "../components/CourseCards/CourseCard";
+import PrimPrioBall from "../../assets/icons/PrimPrioBall";
+import SecPrioBall from "../../assets/icons/SecPrioBall";
+import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
+import BackButton from "../../components/BackButton/BackButton";
+import CourseCard from "../../components/CourseCards/CourseCard";
 import styles from "./CourseOverview.module.css";
 
 type CourseOverviewProps = {
