@@ -4,12 +4,11 @@ import BinIcon from "../../assets/icons/BinIcon";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
-import { PrioProps } from "../../../types";
 
-// type CourseChoiceProps = {
-//   prio: "primary" | "secondary" | "tertiary";
-//   courseChoice: string;
-// };
+type CourseChoiceProps = {
+  prio: "primary" | "secondary" | "tertiary";
+  courseChoice: string;
+};
 
 const priorities = {
   primary: { icon: <PrimPrioBall /> },
@@ -17,7 +16,7 @@ const priorities = {
   tertiary: { icon: <ThirdPrioBall /> },
 };
 
-function CourseChoice({ prio, courseChoice }: PrioProps): JSX.Element {
+function CourseChoice({ prio, courseChoice }: CourseChoiceProps): JSX.Element {
   return (
     <div className={styles.courseChoice}>
       <span>{priorities[prio].icon}</span>
