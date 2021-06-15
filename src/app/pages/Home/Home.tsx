@@ -8,21 +8,21 @@ function Home(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        Guten Tag <span className={styles.greatingName}>Hannes!</span>
-        <br />
-        Willkommen im Kurswahlsystem!
-      </header>
-      <main className={styles.main}>
+        <div>
+          Guten Tag <span className={styles.greatingName}>Hannes!</span>
+          <br />
+          Willkommen im Kurswahlsystem!
+        </div>
         <div>
           <HowToButton />
         </div>
-        <div className={styles.CourseChoiceBlock}>
-          <h1>Meine Kursprioritäten</h1>
-          <CourseChoiceBlock />
-        </div>
+      </header>
+      <main className={styles.main}>
+        <h1>Meine Kursprioritäten</h1>
+        <CourseChoiceBlock />
       </main>
       <footer>
-        <MainButton choice={false}>Senden</MainButton>
+        <MainButton disabled={false}>Senden</MainButton>
       </footer>
     </div>
   );

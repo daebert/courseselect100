@@ -1,11 +1,10 @@
 .link {
   background: var(--primary-color);
   color: var(--contrast-text-color);
-  font-size: 1.25em;
   font-weight: bold;
   border: none;
   border-radius: 0.5em;
-  height: 2.5em;
+  height: 2em;
   display: flex;
   align-items: center;
   justify-content: center;

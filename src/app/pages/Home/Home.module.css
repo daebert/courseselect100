@@ -7,7 +7,10 @@
 }
 
 .header {
-  padding-top: 10%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 1.5em;
+  padding-top: 5%;
   width: 90%;
   margin: auto;
 }
@@ -16,18 +19,10 @@
 }
 
 .main {
-  display: grid;
-  grid-template-rows: auto 1fr;
   width: 90%;
   margin: auto;
-  height: 90%;
 }
 
 .h1 {
   font-weight: bold;
-}
-
-.courseChoiceBlock {
-  height: 100%;
-  margin: auto;
 }
