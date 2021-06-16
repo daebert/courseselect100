@@ -4,26 +4,29 @@ import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
 import BackButton from "../../components/BackButton/BackButton";
 import CourseCard from "../../components/CourseCards/CourseCard";
+import useQuery from "../../hooks/useQuery";
 import styles from "./CourseOverview.module.css";
 
-type CourseOverviewProps = {
-  prio: "primary" | "secondary" | "tertiary";
-};
-
-const priorities = {
+const priorities: {
+  [key: string]: {
+    icon: JSX.Element;
+  };
+} = {
   primary: { icon: <PrimPrioBall /> },
   secondary: { icon: <SecPrioBall /> },
   tertiary: { icon: <ThirdPrioBall /> },
 };
 
-function CourseOverview({ prio }: CourseOverviewProps): JSX.Element {
+function CourseOverview(): JSX.Element {
+  const query = useQuery();
+  const priority = query.get("priority");
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <span className={styles.backButton}>
           <BackButton />
         </span>
-        <span>{priorities[prio].icon}</span>
+        {priority && <span>{priorities[priority]?.icon}</span>}
       </header>
       <main className={styles.main}>
         <div className={styles.cards}>
