@@ -6,4 +6,6 @@ export default {
   component: ChoiceLink,
 };
 
-export const Choice = (): JSX.Element => <ChoiceLink />;
+export const Choice = (): JSX.Element => (
+  <ChoiceLink link={`/overview?priority`} />
+);
