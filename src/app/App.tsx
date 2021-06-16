@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import styles from "./App.module.css";
-// import CourseOverview from "./pages/CourseOverview/CourseOverview";
+import CourseOverview from "./pages/CourseOverview/CourseOverview";
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -11,7 +11,7 @@ type CustomRouteProps = RouteProps & {
 
 const routes: CustomRouteProps[] = [
   { path: "/", Component: Home, exact: true },
-  // { path: "/overview/:prio", Component: CourseOverview "prio="tertiary" },
+  { path: "/overview/", Component: CourseOverview },
 ];
 
 function App(): JSX.Element {
