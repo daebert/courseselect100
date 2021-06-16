@@ -1,0 +1,15 @@
+### Request all credentials
+GET http://localhost:3300/api/credentials HTTP/1.1
+Accept: application/json
+
+
+
+### Add a new credential
+POST http://localhost:3300/api/credentials HTTP/1.1
+Content-Type: application/json
+
+{
+  "service": "MyService",
+  "username": "BobBoson",
+  "password": "supersecret9000"
+}
