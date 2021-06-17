@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
     "_id": "60cb41111b39bd2b8bfae197",
-    "courseName": "Test3",
-    "courseDescShort": "Test3",
-    "courseDescLong": "Test3"
+    "courseName": "Test5",
+    "courseDescShort": "Test5",
+    "courseDescLong": "Test5"
   }
