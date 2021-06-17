@@ -6,12 +6,10 @@ import BackButton from "../../components/BackButton/BackButton";
 import CourseCard from "../../components/CourseCards/CourseCard";
 import useQuery from "../../hooks/useQuery";
 import styles from "./CourseOverview.module.css";
-
-const priorities: {
-  [key: string]: {
-    icon: JSX.Element;
-  };
-} = {
+type Priorities = {
+  [key: string]: { icon: JSX.Element } | undefined;
+};
+const priorities: Priorities = {
   primary: { icon: <PrimPrioBall /> },
   secondary: { icon: <SecPrioBall /> },
   tertiary: { icon: <ThirdPrioBall /> },
@@ -31,7 +29,7 @@ function CourseOverview(): JSX.Element {
       <main className={styles.main}>
         <div className={styles.cards}>
           <CourseCard
-            imgSrc="/images/basketball.png"
+            imgSrc="images/basketball.png"
             headline="Basketball"
             body="Hier kann man Basketball spielen und tolle Tricks lernen!"
           />
@@ -41,7 +39,7 @@ function CourseOverview(): JSX.Element {
             body="Hier kann man Basketball spielen und tolle Tricks lernen!"
           />
           <CourseCard
-            imgSrc="/images/basketball.png"
+            imgSrc="../../images/basketball.png"
             headline="Basketball"
             body="Hier kann man Basketball spielen und tolle Tricks lernen!"
           />
