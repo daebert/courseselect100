@@ -1,6 +1,6 @@
 export type Command = "list" | "add" | "delete";
 
-export type Credential = {
+export type CourseData = {
   service: string;
   username: string;
   password: string;

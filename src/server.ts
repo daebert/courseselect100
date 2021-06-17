@@ -25,10 +25,6 @@ app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname, "app/index.html"));
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Server listening at http://localhost:${PORT}}`);
-// });
-
 if (process.env.MONGODB_URL === undefined) {
   throw new Error("Missing env MONGODB_URL");
 }
