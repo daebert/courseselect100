@@ -7,9 +7,3 @@ Accept: application/json
 ### Add a new credential
 POST http://localhost:3300/api/coursedata HTTP/1.1
 Content-Type: application/json
-
-{
-  "service": "Test2",
-  "username": "Test2",
-  "password": "Test2"
-}
