@@ -2,16 +2,17 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
-// import path from "path";
+import path from "path";
+import router from "./routes";
 import { connectDatabase } from "./utils/database";
-import { readCredentials, saveCredential } from "./utils/credentials";
 
-if (process.env.MONGODB_URL === undefined) {
-  throw new Error("Missing env MONGODB_URL");
-}
+const { PORT = 3300 } = process.env;
 
 const app = express();
-const { PORT = 3300 } = process.env;
+
+app.use(express.json());
+
+app.use("/api", router);
 
 //Serve storybook production bundle
 app.use("/storybook", express.static("dist/storybook"));
@@ -19,26 +20,18 @@ app.use("/storybook", express.static("dist/storybook"));
 // Serve app production bundle
 app.use(express.static("dist/app"));
 
-// // Handle client routing, return all requests to the app
-// app.get("*", (_req, res) => {
-//   res.sendFile(path.join(__dirname, "app/index.html"));
-// });
+// Handle client routing, return all requests to the app
+app.get("*", (_req, res) => {
+  res.sendFile(path.join(__dirname, "app/index.html"));
+});
 
 // app.listen(PORT, () => {
 //   console.log(`Server listening at http://localhost:${PORT}}`);
 // });
 
-app.use(express.json());
-
-app.get("/api/credentials", async (_request, response) => {
-  const credentials = await readCredentials();
-  response.json(credentials);
-});
-
-app.post("/api/credentials", async (request, response) => {
-  await saveCredential(request.body);
-  response.send("Credential saved in db");
-});
+if (process.env.MONGODB_URL === undefined) {
+  throw new Error("Missing env MONGODB_URL");
+}
 
 connectDatabase(process.env.MONGODB_URL).then(() => {
   console.log("Database connected");
