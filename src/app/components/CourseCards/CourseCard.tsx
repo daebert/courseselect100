@@ -16,12 +16,13 @@ function CourseCard({
   priority,
 }: CourseCardProps): JSX.Element {
   return (
-    <div className={styles.courseCard}>
-      <img className={styles.courseCard__img} src={imgSrc} />
-      <h3 className={styles.courseCard__headline}>{headline}</h3>
-      <span className={styles.courseCard__body}>{body}</span>
-      <Link to={`/detail?priority=${priority}`} />
-    </div>
+    <Link to={`/detail?priority=${priority}`}>
+      <div className={styles.courseCard}>
+        <img className={styles.courseCard__img} src={imgSrc} />
+        <h3 className={styles.courseCard__headline}>{headline}</h3>
+        <span className={styles.courseCard__body}>{body}</span>
+      </div>
+    </Link>
   );
 }
 
