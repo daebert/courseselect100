@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import CourseOverview from "./CourseOverview";
 
 export default {
@@ -9,4 +9,4 @@ export default {
   },
 };
 
-export const Default = (): JSX.Element => <CourseOverview prio="tertiary" />;
+// export const Default = (): JSX.Element => <CourseOverview tertiary />;
