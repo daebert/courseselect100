@@ -43,6 +43,7 @@ function CourseOverview(): JSX.Element {
               imgSrc="images/basketball.png"
               headline={course.courseDescShort}
               body={course.courseDescLong}
+              priority={priority}
             />
           ))}
         </div>
