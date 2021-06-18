@@ -9,4 +9,4 @@ export default {
   },
 };
 
-export const Default = (): JSX.Element => <CourseDetail prio="tertiary" />;
+export const Default = (): JSX.Element => <CourseDetail />;
