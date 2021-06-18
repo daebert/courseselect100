@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
@@ -18,6 +18,16 @@ const priorities: Priorities = {
 function CourseOverview(): JSX.Element {
   const query = useQuery();
   const priority = query.get("priority");
+  const [courses, setCourses] = useState([]);
+  useEffect(() => {
+    fetch("/api/coursedata")
+      .then((response) => response.json())
+      .then((courses) => setCourses(courses));
+  }, []);
+  console.log(courses);
+
+  const courseNameArray = courses.map((course) => course.courseName);
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
