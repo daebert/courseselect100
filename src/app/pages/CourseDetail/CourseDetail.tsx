@@ -18,6 +18,15 @@ const priorities = {
 };
 
 function CourseDetail({ prio }: CourseDetailProps): JSX.Element {
+  function stringifyJSONToLocalStorage(key: string, value: string) {
+    const json = JSON.stringify(value);
+    localStorage.setItem(key, json);
+  }
+
+  function handleClick() {
+    stringifyJSONToLocalStorage("courses", "Tanzen");
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -77,7 +86,7 @@ function CourseDetail({ prio }: CourseDetailProps): JSX.Element {
         </section>
       </main>
       <footer>
-        <MainButton>Kurs wählen</MainButton>
+        <MainButton onClick={handleClick}>Kurs wählen</MainButton>
       </footer>
     </div>
   );
