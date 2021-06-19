@@ -44,6 +44,7 @@ function CourseOverview(): JSX.Element {
               headline={course.courseDescShort}
               body={course.courseDescLong}
               priority={priority}
+              coursename={course.courseName}
             />
           ))}
         </div>
