@@ -52,7 +52,6 @@ function CourseDetail(): JSX.Element {
             instructor="Peter Pan"
             // {filteredCourse[0].courseDescShort}
           />
-          )
         </span>
       </header>
       <main className={styles.main}>
