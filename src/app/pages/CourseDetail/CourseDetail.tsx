@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { CourseData } from "../../../types";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
@@ -20,6 +21,21 @@ const priorities: Priorities = {
 function CourseDetail(): JSX.Element {
   const query = useQuery();
   const priority = query.get("priority");
+  const courseName = query.get("coursename");
+  console.log(courseName);
+
+  const [courses, setCourses] = useState<CourseData[]>([]);
+  useEffect(() => {
+    fetch("/api/coursedata")
+      .then((response) => response.json())
+      .then((courses) => setCourses(courses));
+  }, []);
+  console.log(courses);
+
+  const filteredCourse = courses.filter(
+    (course) => course.courseName === courseName
+  );
+  console.log(filteredCourse);
 
   return (
     <div className={styles.container}>
@@ -29,7 +45,12 @@ function CourseDetail(): JSX.Element {
         </span>
         {priority && <span>{priorities[priority]?.icon}</span>}
         <span className={styles.courseName}>
-          <CourseDetailHeader />
+          <CourseDetailHeader
+            imgSrc="images/basketball.png"
+            name={filteredCourse[0].courseName}
+            instructor={filteredCourse[0].courseDescShort}
+          />
+          )
         </span>
       </header>
       <main className={styles.main}>
