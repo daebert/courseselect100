@@ -4,6 +4,7 @@ import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
 import BackButton from "../../components/BackButton/BackButton";
 import CourseDetailHeader from "../../components/CourseDetailHeader/CourseDetailHeader";
+import LongDesc from "../../components/LongDesc/LongDesc";
 import MainButton from "../../components/MainButton/MainButton";
 import useQuery from "../../hooks/useQuery";
 import styles from "./CourseDetail.module.css";
@@ -33,8 +34,8 @@ function CourseDetail(): JSX.Element {
         </span>
       </header>
       <main className={styles.main}>
-        <section>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+        <LongDesc
+          children="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
           rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
@@ -76,8 +77,8 @@ function CourseDetail(): JSX.Element {
           et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
           takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
           amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam
-        </section>
+          invidunt ut labore et dolore magna aliquyam"
+        />
       </main>
       <footer>
         <MainButton>Kurs wählen</MainButton>
