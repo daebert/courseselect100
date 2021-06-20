@@ -22,8 +22,8 @@ function CourseDetailHeader({
         <RoundImage imageSrc={imgSrc} />
       </section>
       <section className={styles.header__text}>
-        <h1>courseName={name}</h1>
-        <span className={styles.header__body}>instructor={instructor}</span>
+        <h1>{name}</h1>
+        <span className={styles.header__body}>{instructor}</span>
         <section className={styles.header__classes}>
           Stufe
           <ClassBallNo />

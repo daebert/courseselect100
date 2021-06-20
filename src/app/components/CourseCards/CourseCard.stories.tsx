@@ -12,5 +12,6 @@ export const Basketball = (): JSX.Element => (
     headline="Basketball"
     body="Hier kann man Basketball spielen und tolle Tricks lernen!"
     priority="high"
+    coursename="Hello"
   />
 );
