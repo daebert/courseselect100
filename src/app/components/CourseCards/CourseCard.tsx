@@ -6,7 +6,7 @@ type CourseCardProps = {
   imgSrc: string;
   headline: string;
   body: string;
-  priority: string;
+  priority: string | null;
   coursename: string;
 };
 
