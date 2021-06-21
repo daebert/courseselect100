@@ -22,7 +22,7 @@ function CourseOverview(): JSX.Element {
 
   const [courses, setCourses] = useState<CourseData[]>([]);
   useEffect(() => {
-    fetch("/api/coursedata")
+    fetch("/api/courses")
       .then((response) => response.json())
       .then((courses) => setCourses(courses));
   }, []);
