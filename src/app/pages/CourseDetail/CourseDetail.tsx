@@ -47,10 +47,10 @@ function CourseDetail(): JSX.Element {
         <span className={styles.courseName}>
           <CourseDetailHeader
             imgSrc="images/basketball.png"
-            name="Basketball"
-            // {filteredCourse[0].courseName}
-            instructor="Peter Pan"
-            // {filteredCourse[0].courseDescShort}
+            name={filteredCourse[0].courseName // "Basketball"
+            }
+            instructor={filteredCourse[0].courseDescShort // "Peter Pan"
+            }
           />
         </span>
       </header>
