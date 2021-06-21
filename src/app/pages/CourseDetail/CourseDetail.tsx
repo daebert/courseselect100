@@ -31,6 +31,24 @@ function CourseDetail(): JSX.Element {
       .then((course) => setCourse(course));
   }, []);
 
+  // function stringifyJSONToLocalStorage(key: string, value: string) {
+  //   const json = JSON.stringify(value);
+  //   localStorage.setItem(key, json);
+  // }
+
+  // function handleClick() {
+  //   stringifyJSONToLocalStorage("", "Tanzen");
+  // }
+
+  const testObject = {
+    priority: { priority },
+    name: { courseName },
+  };
+
+  function handleClick() {
+    localStorage.setItem("testObject", JSON.stringify(testObject));
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -54,7 +72,7 @@ function CourseDetail(): JSX.Element {
         <LongDesc children={course?.courseDescLong} />
       </main>
       <footer>
-        <MainButton>Kurs wählen</MainButton>
+        <MainButton onClick={handleClick}>Kurs wählen</MainButton>
       </footer>
     </div>
   );
