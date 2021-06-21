@@ -5,15 +5,25 @@ import ClassBallNo from "../../assets/icons/ClassBallNo";
 import ClassBallSingleDigit from "../../assets/icons/ClassBallSingleDigit";
 import RoundImage from "../RoundImage/RoundImage";
 
-function CourseDetailHeader(): JSX.Element {
+type CourseDetailHeaderProps = {
+  imgSrc: string;
+  name: string;
+  instructor: string;
+};
+
+function CourseDetailHeader({
+  imgSrc,
+  name,
+  instructor,
+}: CourseDetailHeaderProps): JSX.Element {
   return (
     <header className={styles.header}>
       <section className={styles.header__image}>
-        <RoundImage imageSrc="/images/basketball.png" />
+        <RoundImage imageSrc={imgSrc} />
       </section>
       <section className={styles.header__text}>
-        <h1>Basketball</h1>
-        <span className={styles.header__body}>Leitung: Peter Lustig</span>
+        <h1>{name}</h1>
+        <span className={styles.header__body}>{instructor}</span>
         <section className={styles.header__classes}>
           Stufe
           <ClassBallNo />

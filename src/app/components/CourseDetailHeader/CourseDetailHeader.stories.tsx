@@ -6,4 +6,6 @@ export default {
   component: CourseDetailHeader,
 };
 
-export const Header = (): JSX.Element => <CourseDetailHeader />;
+export const Header = (): JSX.Element => (
+  <CourseDetailHeader imgSrc="Test" name="Test" instructor="Test" />
+);
