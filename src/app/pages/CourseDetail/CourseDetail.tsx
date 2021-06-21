@@ -23,20 +23,14 @@ function CourseDetail(): JSX.Element {
   const query = useQuery();
   const priority = query.get("priority");
   const courseName = query.get("coursename");
-  console.log(courseName);
 
-  const [courses, setCourses] = useState<CourseData[]>([]);
+  const [course, setCourse] = useState<CourseData[]>([]);
   useEffect(() => {
-    fetch("/api/coursedata")
+    fetch(`/api/courses/${courseName}`)
       .then((response) => response.json())
-      .then((courses) => setCourses(courses));
+      .then((course) => setCourse(course));
   }, []);
-  console.log(courses);
-
-  const filteredCourse = courses.filter(
-    (course) => course.courseName === courseName
-  );
-  console.log(filteredCourse);
+  console.log(course);
 
   return (
     <div className={styles.container}>
@@ -46,11 +40,15 @@ function CourseDetail(): JSX.Element {
         </span>
         {priority && <span>{priorities[priority]?.icon}</span>}
         <span className={styles.courseName}>
-          <CourseDetailHeader
-            imgSrc="images/basketball.png"
-            name={filteredCourse[0].courseName}
-            instructor={filteredCourse[0].courseDescShort}
-          />
+          {course.length < 0 ? (
+            <CourseDetailHeader
+              imgSrc="images/basketball.png"
+              name={course[0].courseName}
+              instructor={course[0].courseDescShort}
+            />
+          ) : (
+            <div>Daten nicht da!</div>
+          )}
         </span>
       </header>
       <main className={styles.main}>

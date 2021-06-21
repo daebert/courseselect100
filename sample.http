@@ -1,16 +1,20 @@
-### Request all coursedata
-GET http://localhost:3300/api/coursedata HTTP/1.1
+### Request all courses
+GET http://localhost:3300/api/courses HTTP/1.1
+Accept: application/json
+
+
+### Request a single course
+GET http://localhost:3300/api/courses/test7 HTTP/1.1
 Accept: application/json
 
 
 
 ### Add new coursedata
-POST http://localhost:3300/api/coursedata HTTP/1.1
+POST http://localhost:3300/api/courses HTTP/1.1
 Content-Type: application/json
 
 {
-    "_id": "60cb41111b39bd2b8bfae197",
-    "courseName": "Test5",
-    "courseDescShort": "Test5",
-    "courseDescLong": "Test5"
+    "courseName": "Test9",
+    "courseDescShort": "Test9",
+    "courseDescLong": "Test9"
   }
