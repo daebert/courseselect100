@@ -40,13 +40,13 @@ function CourseDetail(): JSX.Element {
   //   stringifyJSONToLocalStorage("", "Tanzen");
   // }
 
-  const testObject = {
-    priority: { priority },
-    name: { courseName },
-  };
-
   function handleClick() {
-    localStorage.setItem("testObject", JSON.stringify(testObject));
+    if (priority) {
+      const testObject = {
+        [priority]: { name: courseName },
+      };
+      localStorage.setItem("testObject", JSON.stringify(testObject));
+    }
   }
 
   return (
