@@ -24,13 +24,12 @@ function CourseDetail(): JSX.Element {
   const priority = query.get("priority");
   const courseName = query.get("coursename");
 
-  const [course, setCourse] = useState<CourseData[]>([]);
+  const [course, setCourse] = useState<CourseData | null>(null);
   useEffect(() => {
     fetch(`/api/courses/${courseName}`)
       .then((response) => response.json())
       .then((course) => setCourse(course));
   }, []);
-  console.log(course);
 
   return (
     <div className={styles.container}>
@@ -40,11 +39,11 @@ function CourseDetail(): JSX.Element {
         </span>
         {priority && <span>{priorities[priority]?.icon}</span>}
         <span className={styles.courseName}>
-          {course.length < 0 ? (
+          {course !== null ? (
             <CourseDetailHeader
               imgSrc="images/basketball.png"
-              name={course[0].courseName}
-              instructor={course[0].courseDescShort}
+              name={course.courseName}
+              instructor={course.courseDescShort}
             />
           ) : (
             <div>Daten nicht da!</div>
@@ -52,51 +51,7 @@ function CourseDetail(): JSX.Element {
         </span>
       </header>
       <main className={styles.main}>
-        <LongDesc
-          children="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-          et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam"
-        />
+        <LongDesc children={course?.courseDescLong} />
       </main>
       <footer>
         <MainButton>Kurs wählen</MainButton>

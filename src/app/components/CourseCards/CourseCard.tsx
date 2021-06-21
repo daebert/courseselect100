@@ -6,8 +6,8 @@ type CourseCardProps = {
   imgSrc: string;
   headline: string;
   body: string;
-  priority: string | null;
-  coursename: string | null;
+  priority: string;
+  coursename: string;
 };
 
 function CourseCard({
