@@ -31,21 +31,12 @@ function CourseDetail(): JSX.Element {
       .then((course) => setCourse(course));
   }, []);
 
-  // function stringifyJSONToLocalStorage(key: string, value: string) {
-  //   const json = JSON.stringify(value);
-  //   localStorage.setItem(key, json);
-  // }
-
-  // function handleClick() {
-  //   stringifyJSONToLocalStorage("", "Tanzen");
-  // }
-
   function handleClick() {
     if (priority) {
-      const testObject = {
+      const choiceObject = {
         [priority]: { name: courseName },
       };
-      localStorage.setItem("testObject", JSON.stringify(testObject));
+      localStorage.setItem("choiceObject", JSON.stringify(choiceObject));
     }
   }
 
