@@ -4,6 +4,7 @@ import HowToButton from "../../components/HowToButton/HowToButton";
 import MainButton from "../../components/MainButton/MainButton";
 import styles from "./Home.module.css";
 import parseChoiceFromLocalStorage from "../../../utils/parseFromLocalStorage";
+import { saveChoiceData } from "../../api/choices";
 
 function Home(): JSX.Element {
   const choiceObject = parseChoiceFromLocalStorage();
@@ -34,7 +35,13 @@ function Home(): JSX.Element {
         <CourseChoiceBlock />
       </main>
       <footer>
-        <MainButton disabled={send()}>Senden</MainButton>
+        <MainButton
+          disabled={send()}
+          route="/choice"
+          onClick={() => saveChoiceData(choiceObject)}
+        >
+          Senden
+        </MainButton>
       </footer>
     </div>
   );

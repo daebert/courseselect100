@@ -73,7 +73,9 @@ function CourseDetail(): JSX.Element {
         <LongDesc children={course?.courseDescLong} />
       </main>
       <footer>
-        <MainButton onClick={handleClick}>Kurs wählen</MainButton>
+        <MainButton onClick={handleClick} route="/">
+          Kurs wählen
+        </MainButton>
       </footer>
     </div>
   );

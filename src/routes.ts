@@ -1,8 +1,8 @@
 import express from "express";
-import { saveChoiceData } from "./utils/courseChoice";
 import {
   readCourseData,
   readSingleCourseData,
+  saveChoiceData,
   saveCourseData,
 } from "./utils/coursedata";
 
