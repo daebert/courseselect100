@@ -3,3 +3,15 @@ export type CourseData = {
   courseDescShort: string;
   courseDescLong: string;
 };
+
+export type Choice = {
+  primary: {
+    name: string;
+  };
+  secondary: {
+    name: string;
+  };
+  tertiary: {
+    name: string;
+  };
+};

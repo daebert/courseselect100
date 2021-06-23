@@ -3,8 +3,20 @@ import CourseChoiceBlock from "../../components/CourseChoiceBlock/CourseChoiceBl
 import HowToButton from "../../components/HowToButton/HowToButton";
 import MainButton from "../../components/MainButton/MainButton";
 import styles from "./Home.module.css";
+import parseChoiceFromLocalStorage from "../../../utils/parseFromLocalStorage";
 
 function Home(): JSX.Element {
+  const choiceObject = parseChoiceFromLocalStorage();
+  function send(): boolean {
+    if (
+      choiceObject.primary?.name === "" ||
+      choiceObject.secondary?.name === "" ||
+      choiceObject.tertiary?.name === ""
+    )
+      return true;
+    return false;
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -22,7 +34,7 @@ function Home(): JSX.Element {
         <CourseChoiceBlock />
       </main>
       <footer>
-        <MainButton disabled={false}>Senden</MainButton>
+        <MainButton disabled={send()}>Senden</MainButton>
       </footer>
     </div>
   );
