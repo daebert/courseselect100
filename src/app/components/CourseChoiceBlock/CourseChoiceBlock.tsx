@@ -1,15 +1,7 @@
 import React from "react";
 import CourseChoice from "../CourseChoice/CourseChoice";
 import styles from "./CourseChoiceBlock.module.css";
-
-// const choiceObject = localStorage.getItem("choiceObject");
-// console.log(choiceObject);
-
-// if (choiceObject !== null) {
-//   JSON.parse(choiceObject);
-// } else {
-//   ("");
-// }
+// import parseChoiceFromLocalStorage from "../../../utils/parseFromLocalStorage";
 
 type Choice = {
   primary: {
@@ -42,17 +34,13 @@ function parseChoiceFromLocalStorage(): Choice {
   return data;
 }
 
-const PrioName = parseChoiceFromLocalStorage();
-const name1 = PrioName.primary === undefined ? "" : PrioName.primary.name;
-const name2 = PrioName.secondary === undefined ? "" : PrioName.secondary.name;
-const name3 = PrioName.tertiary === undefined ? "" : PrioName.tertiary.name;
-
 function CourseChoiceBlock(): JSX.Element {
+  const choiceObject = parseChoiceFromLocalStorage();
   return (
     <div className={styles.courseChoiceBlock}>
-      <CourseChoice priority="primary" name={name1} />
-      <CourseChoice priority="secondary" name={name2} />
-      <CourseChoice priority="tertiary" name={name3} />
+      <CourseChoice priority="primary" name={choiceObject.primary?.name} />
+      <CourseChoice priority="secondary" name={choiceObject.secondary?.name} />
+      <CourseChoice priority="tertiary" name={choiceObject.tertiary?.name} />
     </div>
   );
 }

@@ -32,12 +32,22 @@ function CourseDetail(): JSX.Element {
   }, []);
 
   function handleClick() {
-    if (priority) {
-      const choiceObject = {
-        [priority]: { name: courseName },
-      };
-      localStorage.setItem("choiceObject", JSON.stringify(choiceObject));
+    function parseChoiceFromLocalStorage() {
+      const json = localStorage.getItem("choiceObject");
+      if (json === null) {
+        return {};
+      }
+      const data = JSON.parse(json);
+      return data;
     }
+
+    const choiceObject = parseChoiceFromLocalStorage();
+
+    if (priority) {
+      choiceObject[priority] = { name: courseName };
+    }
+
+    localStorage.setItem("choiceObject", JSON.stringify(choiceObject));
   }
 
   return (
