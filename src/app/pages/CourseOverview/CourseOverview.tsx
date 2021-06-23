@@ -26,7 +26,6 @@ function CourseOverview(): JSX.Element {
       .then((response) => response.json())
       .then((courses) => setCourses(courses));
   }, []);
-  console.log(courses);
 
   return (
     <div className={styles.container}>
