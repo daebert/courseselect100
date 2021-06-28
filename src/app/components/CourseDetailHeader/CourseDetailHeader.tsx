@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./CourseDetailHeader.module.css";
-import ClassBallDoubleDigit from "../../assets/icons/ClassBallDoubleDigit";
+import ClassBallYes from "../../assets/icons/ClassBallYes";
 import ClassBallNo from "../../assets/icons/ClassBallNo";
-import ClassBallSingleDigit from "../../assets/icons/ClassBallSingleDigit";
 import RoundImage from "../RoundImage/RoundImage";
 
 type CourseDetailHeaderProps = {
@@ -29,10 +28,10 @@ function CourseDetailHeader({
           <ClassBallNo />
           <ClassBallNo />
           <ClassBallNo />
-          <ClassBallSingleDigit course="8" />
-          <ClassBallSingleDigit course="9" />
-          <ClassBallDoubleDigit course="10" />
-          <ClassBallDoubleDigit course="11" />
+          <ClassBallYes num={8} />
+          <ClassBallYes num={9} />
+          <ClassBallYes num={10} />
+          <ClassBallYes num={11} />
         </section>
       </section>
     </header>
