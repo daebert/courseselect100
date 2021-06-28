@@ -8,6 +8,23 @@ GET http://localhost:3300/api/courses/test7 HTTP/1.1
 Accept: application/json
 
 
+### Add new choicedata
+POST http://localhost:3300/api/choices HTTP/1.1
+Content-Type: application/json
+
+{
+  "primary": {
+    "name": "string"
+  },
+  "secondary": {
+    "name": "string"
+  },
+  "tertiary": {
+    "name": "string"
+  }
+}
+
+
 
 ### Add new coursedata
 POST http://localhost:3300/api/courses HTTP/1.1
@@ -17,4 +34,7 @@ Content-Type: application/json
     "courseName": "Test9",
     "courseDescShort": "Test9",
     "courseDescLong": "Test9"
-  }
+     }
+
+
+  

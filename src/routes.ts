@@ -2,6 +2,7 @@ import express from "express";
 import {
   readCourseData,
   readSingleCourseData,
+  saveChoiceData,
   saveCourseData,
 } from "./utils/coursedata";
 
@@ -22,6 +23,11 @@ router.get("/courses/:courseName", async (request, response) => {
 router.post("/courses", async (request, response) => {
   await saveCourseData(request.body);
   response.send("CourseData saved in db");
+});
+
+router.post("/choices", async (request, response) => {
+  await saveChoiceData(request.body);
+  response.send("ChoiceData saved in db");
 });
 
 export default router;
