@@ -6,15 +6,17 @@ type MainButtonProps = {
   children: ReactNode;
   disabled?: boolean;
   onClick?: () => void;
+  route: string;
 };
 
 function MainButton({
   children,
   disabled,
   onClick,
+  route,
 }: MainButtonProps): JSX.Element {
   return (
-    <Link to="/">
+    <Link to={route}>
       <button className={styles.button} disabled={disabled} onClick={onClick}>
         {children}
       </button>

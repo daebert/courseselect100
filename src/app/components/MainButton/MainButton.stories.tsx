@@ -7,8 +7,10 @@ export default {
 };
 
 export const Send = (): JSX.Element => (
-  <MainButton disabled={false}>Senden</MainButton>
+  <MainButton disabled={false} route="/">
+    Senden
+  </MainButton>
 );
 export const SelectCourse = (): JSX.Element => (
-  <MainButton>Kurs wählen</MainButton>
+  <MainButton route="/">Kurs wählen</MainButton>
 );
