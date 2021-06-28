@@ -11,7 +11,11 @@ function Login(): JSX.Element {
         <Logo />
       </header>
       <main className={styles.main}>
-        <LabeledInput placeholder="E-Mail" type="email" value="email" />
+        <LabeledInput
+          placeholder="E-Mail"
+          type="email"
+          value="hannes.hoch@web.de"
+        />
         <LabeledInput placeholder="Password" type="password" value="password" />
         <span className={styles.main__text}>Passwort vergessen?</span>
         <Link to="/dashboard" className={styles.link}>
