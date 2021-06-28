@@ -13,7 +13,7 @@
 
 .main {
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto 30% auto;
   align-items: center;
   width: 90%;
   margin: 1em auto;
@@ -21,7 +21,8 @@
 
 .main__text {
   color: var(--background-color);
-  padding-bottom: 2em;
+  padding-bottom: 2.5em;
+  align-self: start;
 }
 
 .link {
@@ -44,6 +45,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 2.5em;
 }
 
 .bold {

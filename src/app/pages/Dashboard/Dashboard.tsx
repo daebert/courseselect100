@@ -2,7 +2,7 @@ import React from "react";
 import CourseChoiceBlock from "../../components/CourseChoiceBlock/CourseChoiceBlock";
 import HowToButton from "../../components/HowToButton/HowToButton";
 import MainButton from "../../components/MainButton/MainButton";
-import styles from "./Home.module.css";
+import styles from "./Dashboard.module.css";
 
 function Home(): JSX.Element {
   return (

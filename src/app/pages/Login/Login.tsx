@@ -14,7 +14,7 @@ function Login(): JSX.Element {
         <LabeledInput placeholder="E-Mail" type="email" value="email" />
         <LabeledInput placeholder="Password" type="password" value="password" />
         <span className={styles.main__text}>Passwort vergessen?</span>
-        <Link to="/" className={styles.link}>
+        <Link to="/dashboard" className={styles.link}>
           Login
         </Link>
       </main>
