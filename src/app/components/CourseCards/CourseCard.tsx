@@ -18,7 +18,10 @@ function CourseCard({
   coursename,
 }: CourseCardProps): JSX.Element {
   return (
-    <Link to={`/detail?priority=${priority}&coursename=${coursename}`}>
+    <Link
+      to={`/detail?priority=${priority}&coursename=${coursename}`}
+      className={styles.courseCard__link}
+    >
       <div className={styles.courseCard}>
         <img className={styles.courseCard__img} src={imgSrc} />
         <h3 className={styles.courseCard__headline}>{headline}</h3>

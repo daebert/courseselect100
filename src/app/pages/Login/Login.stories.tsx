@@ -1,13 +1,13 @@
 import React from "react";
-import Dashboard from "./Home";
+import Login from "./Login";
 import { Meta } from "@storybook/react";
 
 export default {
-  title: "Page/Dashboard",
-  component: Dashboard,
+  title: "Page/Login",
+  component: Login,
   parameters: {
     layout: "fullscreen",
   },
 } as Meta;
 
-export const Default = (): JSX.Element => <Dashboard />;
+export const Default = (): JSX.Element => <Login />;
