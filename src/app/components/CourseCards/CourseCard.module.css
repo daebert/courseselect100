@@ -31,3 +31,7 @@
   color: var(--text-color);
   font-size: 1em;
 }
+
+.courseCard__link {
+  text-decoration: none;
+}
