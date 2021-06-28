@@ -1,7 +1,7 @@
 import React from "react";
 
 type ClassBallProps = {
-  num: number;
+  num?: number;
 };
 
 export default function ClassBallDoubleDigit({
@@ -14,14 +14,16 @@ export default function ClassBallDoubleDigit({
       height="25"
       viewBox="0 0 25 25"
     >
-      <g
-        fill="var(--primary-color)"
-        stroke="var(--primary-color)"
-        stroke-width="1"
-      >
-        <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
-        <circle cx="12.5" cy="12.5" r="12" fill="none" />
-      </g>
+      {num && (
+        <g
+          fill={num ? "var(--primary-color)" : "none"}
+          stroke="var(--primary-color)"
+          stroke-width="1"
+        >
+          <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
+          <circle cx="12.5" cy="12.5" r="12" fill="none" />
+        </g>
+      )}
       {num && (
         <text
           transform="translate(12 19)"
@@ -30,7 +32,7 @@ export default function ClassBallDoubleDigit({
           font-family="Roboto-Regular, Roboto"
           letter-spacing="0.025em"
         >
-          <tspan x={num > 9 ? "-9.184" : -4.492} y="0">
+          <tspan x={num > 9 ? -9.184 : -4.492} y="0">
             {num}
           </tspan>
         </text>

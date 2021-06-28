@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./CourseDetailHeader.module.css";
-import ClassBallYes from "../../assets/icons/ClassBallYes";
-import ClassBallNo from "../../assets/icons/ClassBallNo";
+import ClassBall from "../../assets/icons/ClassBall";
 import RoundImage from "../RoundImage/RoundImage";
 
 type CourseDetailHeaderProps = {
@@ -25,13 +24,13 @@ function CourseDetailHeader({
         <span className={styles.header__body}>{instructor}</span>
         <section className={styles.header__classes}>
           Stufe
-          <ClassBallNo />
-          <ClassBallNo />
-          <ClassBallNo />
-          <ClassBallYes num={8} />
-          <ClassBallYes num={9} />
-          <ClassBallYes num={10} />
-          <ClassBallYes num={11} />
+          <ClassBall />
+          <ClassBall />
+          <ClassBall />
+          <ClassBall num={8} />
+          <ClassBall num={9} />
+          <ClassBall num={10} />
+          <ClassBall num={11} />
         </section>
       </section>
     </header>
