@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 import CourseOverview from "./pages/CourseOverview/CourseOverview";
 import CourseDetail from "./pages/CourseDetail/CourseDetail";
 import Login from "./pages/Login/Login";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/Home/Home";
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;

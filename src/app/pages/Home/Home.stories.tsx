@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Home";
 import { Meta } from "@storybook/react";
 
 export default {
