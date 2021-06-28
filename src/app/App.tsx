@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import styles from "./App.module.css";
 import CourseOverview from "./pages/CourseOverview/CourseOverview";
 import CourseDetail from "./pages/CourseDetail/CourseDetail";
+import Login from "./pages/Login/Login";
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -11,7 +12,8 @@ type CustomRouteProps = RouteProps & {
 };
 
 const routes: CustomRouteProps[] = [
-  { path: "/", Component: Home, exact: true },
+  { path: "/", Component: Login, exact: true },
+  { path: "/dashboard", Component: Home, exact: true },
   { path: "/overview/", Component: CourseOverview },
   { path: "/detail/", Component: CourseDetail },
 ];
