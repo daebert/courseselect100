@@ -7,5 +7,5 @@ export default {
 };
 
 export const Email = (): JSX.Element => (
-  <LabeledInput placeholder="E-Mail" value="" onChange={console.log} />
+  <LabeledInput placeholder="E-Mail" value="" />
 );
