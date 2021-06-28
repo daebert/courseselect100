@@ -8,15 +8,10 @@ import { saveChoiceData } from "../../api/choices";
 
 function Home(): JSX.Element {
   const choiceObject = parseChoiceFromLocalStorage();
-  function send(): boolean {
-    if (
-      choiceObject.primary?.name === "" ||
-      choiceObject.secondary?.name === "" ||
-      choiceObject.tertiary?.name === ""
-    )
-      return true;
-    return false;
-  }
+  const isReady =
+    choiceObject.primary?.name &&
+    choiceObject.secondary?.name &&
+    choiceObject.tertiary?.name;
 
   return (
     <div className={styles.container}>
@@ -36,7 +31,7 @@ function Home(): JSX.Element {
       </main>
       <footer>
         <MainButton
-          disabled={send()}
+          disabled={!isReady}
           route="/choice"
           onClick={() => saveChoiceData(choiceObject)}
         >
