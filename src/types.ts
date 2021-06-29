@@ -1,7 +1,9 @@
 export type CourseData = {
   courseName: string;
-  instructor: string;
   courseDescLong: string;
+  courseDescShort: string;
+  instructor: string;
+  image: string;
 };
 
 export type Choice = {
