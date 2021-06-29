@@ -5,14 +5,12 @@ import styles from "./CourseCard.module.css";
 type CourseCardProps = {
   imgSrc: string;
   headline: string;
-  body: string;
   priority: string | null;
   coursename: string;
 };
 
 function CourseCard({
   headline,
-  body,
   imgSrc,
   priority,
   coursename,
@@ -25,7 +23,6 @@ function CourseCard({
       <div className={styles.courseCard}>
         <img className={styles.courseCard__img} src={imgSrc} />
         <h3 className={styles.courseCard__headline}>{headline}</h3>
-        <span className={styles.courseCard__body}>{body}</span>
       </div>
     </Link>
   );
