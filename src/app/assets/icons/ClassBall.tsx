@@ -4,9 +4,7 @@ type ClassBallProps = {
   num?: number;
 };
 
-export default function ClassBallDoubleDigit({
-  num: num,
-}: ClassBallProps): JSX.Element {
+export default function ClassBall({ num: num }: ClassBallProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
