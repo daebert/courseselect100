@@ -5,9 +5,8 @@
   column-gap: 1em;
   width: 90%;
   margin: 0 auto;
-  background-color: #f2edfe;
+  background-color: var(--background-color);
   border-radius: 1em;
-  border: 0.1em solid var(--primary-border-color);
 }
 
 .courseCard__img {
