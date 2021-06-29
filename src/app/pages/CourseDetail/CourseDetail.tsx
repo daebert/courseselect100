@@ -7,6 +7,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import CourseDetailHeader from "../../components/CourseDetailHeader/CourseDetailHeader";
 import LongDesc from "../../components/LongDesc/LongDesc";
 import MainButton from "../../components/MainButton/MainButton";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import useQuery from "../../hooks/useQuery";
 import styles from "./CourseDetail.module.css";
 
@@ -24,7 +25,12 @@ function CourseDetail(): JSX.Element {
   const priority = query.get("priority");
   const courseName = query.get("coursename");
 
-  const [course, setCourse] = useState<CourseData | null>(null);
+  const [course, setCourse] = useLocalStorage<CourseData | null>(
+    "choiceObject",
+    null
+  );
+
+  // const [course, setCourse] = useState<CourseData | null>(null);
   useEffect(() => {
     fetch(`/api/courses/${courseName}`)
       .then((response) => response.json())
