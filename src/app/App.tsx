@@ -16,7 +16,7 @@ const routes: CustomRouteProps[] = [
   { path: "/dashboard", Component: Dashboard, exact: true },
   { path: "/overview/", Component: CourseOverview },
   { path: "/detail/", Component: CourseDetail },
-  { path: "/finish", Component: CourseDetail },
+  { path: "/confirm", Component: CourseDetail },
 ];
 
 function App(): JSX.Element {
