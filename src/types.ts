@@ -1,6 +1,6 @@
 export type CourseData = {
   courseName: string;
-  courseDescShort: string;
+  instructor: string;
   courseDescLong: string;
 };
 

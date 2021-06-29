@@ -15,15 +15,17 @@ function CourseDetailHeader({
   instructor,
 }: CourseDetailHeaderProps): JSX.Element {
   return (
-    <header className={styles.header}>
-      <section className={styles.header__image}>
-        <RoundImage imageSrc={imgSrc} />
-      </section>
-      <section className={styles.header__text}>
-        <h1>{name}</h1>
-        <span className={styles.header__body}>{instructor}</span>
-        <section className={styles.header__classes}>
-          Stufe
+    <header className={styles.container}>
+      <div className={styles.desc}>
+        <section>
+          <RoundImage imageSrc={imgSrc} />
+        </section>
+        <section className={styles.text}>
+          <span>{name}</span>
+          <span className={styles.instructor}>Kursleiter: {instructor}</span>
+        </section>
+        <span className={styles.class}>Jahrgang</span>
+        <span className={styles.classballs}>
           <ClassBall />
           <ClassBall />
           <ClassBall />
@@ -31,8 +33,8 @@ function CourseDetailHeader({
           <ClassBall num={9} />
           <ClassBall num={10} />
           <ClassBall num={11} />
-        </section>
-      </section>
+        </span>
+      </div>
     </header>
   );
 }
