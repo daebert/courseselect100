@@ -32,7 +32,7 @@ function Home(): JSX.Element {
       <footer>
         <MainButton
           disabled={!isReady}
-          route="/choice"
+          route="/confirm"
           onClick={() => saveChoiceData(choiceObject)}
         >
           Senden
