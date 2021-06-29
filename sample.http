@@ -31,10 +31,16 @@ POST http://localhost:3300/api/courses HTTP/1.1
 Content-Type: application/json
 
 {
-    "courseName": "Test9",
-    "courseDescShort": "Test9",
-    "courseDescLong": "Test9"
-     }
+    "courseName": "Natur und Umwelt zum Anfassen und Mitmachen",
+    "instructor": "Harry Hase",
+    "courseDescLong": "Ähnlich wie in unserer Umwelt-AG wollen wir uns im Rahmen einiger ausgewählter Projekte praxisorientiert mit umweltrelevanten Themen beschäftigen; darüber hinaus ist eine ökologische Exkursion in die nähere Umgebung geplant",
+
+    "courseName": "Nachhaltigkeit bei Henkel – von der Entwicklung über Produktion bis zum Entsorgen",
+    "instructor": "Harry Hase",
+    "courseDescLong": "Das hier beschriebene Projekt richtet sich an Schüler ab der Klasse 9 aufwärts, die den Umgang mit Nachhaltigkeit, Energie- und Ressourcenschonung in weltweiten Großunternehmen kennen lernen wollen. In einzelnen Workshops werden Ansätze und Lösungen zur Nachhaltigkeit in der Produktentwicklung, der Produktion und der Anwendung und Verwertung von Klebstoffen erarbeitet. Ein weiterer wichtiger Aspekt ist die Frage der Einbindung aller Mitarbeiter in globalen Unternehmen."
+
+
+ }
 
 
   

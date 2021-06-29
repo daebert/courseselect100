@@ -62,7 +62,7 @@ function CourseDetail(): JSX.Element {
             <CourseDetailHeader
               imgSrc="images/basketball.png"
               name={course.courseName}
-              instructor={course.courseDescShort}
+              instructor={course.instructor}
             />
           ) : (
             <div>Daten nicht da!</div>

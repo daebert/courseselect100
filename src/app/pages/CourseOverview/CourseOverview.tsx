@@ -40,8 +40,7 @@ function CourseOverview(): JSX.Element {
           {courses.map((course) => (
             <CourseCard
               imgSrc="images/basketball.png"
-              headline={course.courseDescShort}
-              body={course.courseDescLong}
+              headline={course.courseName}
               priority={priority}
               coursename={course.courseName}
             />
