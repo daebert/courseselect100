@@ -60,8 +60,8 @@ function CourseDetail(): JSX.Element {
         <span className={styles.courseName}>
           {course !== null ? (
             <CourseDetailHeader
-              imgSrc="images/basketball.png"
-              name={course.courseName}
+              imgSrc={course.image}
+              name={course.courseDescShort}
               instructor={course.instructor}
             />
           ) : (
