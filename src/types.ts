@@ -5,13 +5,13 @@ export type CourseData = {
 };
 
 export type Choice = {
-  primary: {
+  primary?: {
     name: string;
   };
-  secondary: {
+  secondary?: {
     name: string;
   };
-  tertiary: {
+  tertiary?: {
     name: string;
   };
 };

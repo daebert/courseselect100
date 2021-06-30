@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CourseData } from "../../../types";
+import { Choice, CourseData } from "../../../types";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
@@ -25,12 +25,8 @@ function CourseDetail(): JSX.Element {
   const priority = query.get("priority");
   const courseName = query.get("coursename");
 
-  const [course, setCourse] = useLocalStorage<CourseData | null>(
-    "choiceObject",
-    null
-  );
+  const [course, setCourse] = useLocalStorage<Choice>("choiceObject", {});
 
-  // const [course, setCourse] = useState<CourseData | null>(null);
   useEffect(() => {
     fetch(`/api/courses/${courseName}`)
       .then((response) => response.json())
@@ -38,22 +34,16 @@ function CourseDetail(): JSX.Element {
   }, []);
 
   function handleClick() {
-    function parseChoiceFromLocalStorage() {
-      const json = localStorage.getItem("choiceObject");
-      if (json === null) {
-        return {};
-      }
-      const data = JSON.parse(json);
-      return data;
+    if (
+      (priority === "primary" ||
+        priority === "secondary" ||
+        priority === "tertiary") &&
+      courseName
+    ) {
+      const updatedCourse = { ...course };
+      updatedCourse[priority] = { name: courseName };
+      setCourse(updatedCourse);
     }
-
-    const choiceObject = parseChoiceFromLocalStorage();
-
-    if (priority) {
-      choiceObject[priority] = { name: courseName };
-    }
-
-    localStorage.setItem("choiceObject", JSON.stringify(choiceObject));
   }
 
   return (
