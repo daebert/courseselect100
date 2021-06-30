@@ -6,18 +6,18 @@ type CourseCardProps = {
   imgSrc: string;
   headline: string;
   priority: string | null;
-  coursename: string;
+  courseName: string;
 };
 
 function CourseCard({
   headline,
   imgSrc,
   priority,
-  coursename,
+  courseName,
 }: CourseCardProps): JSX.Element {
   return (
     <Link
-      to={`/detail?priority=${priority}&coursename=${coursename}`}
+      to={`/detail?priority=${priority}&coursename=${courseName}`}
       className={styles.courseCard__link}
     >
       <div className={styles.courseCard}>

@@ -1,7 +1,7 @@
-export type CourseData = {
-  courseName: string;
-  courseDescLong: string;
-  courseDescShort: string;
+export type Courses = {
+  name: string;
+  descLong: string;
+  descShort: string;
   instructor: string;
   image: string;
 };
