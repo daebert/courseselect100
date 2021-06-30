@@ -11,6 +11,6 @@ export const Basketball = (): JSX.Element => (
     imgSrc="/images/basketball.png"
     headline="Basketball"
     priority="high"
-    courseName="Hello"
+    title="Hello"
   />
 );
