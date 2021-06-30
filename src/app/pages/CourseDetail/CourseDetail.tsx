@@ -25,7 +25,7 @@ function CourseDetail(): JSX.Element {
   const priority = query.get("priority");
   const courseName = query.get("coursename");
 
-  const [course, setCourse] = useLocalStorage<Choice>("choiceObject", {});
+  const [course, setCourse] = useState<CourseData | null>(null);
 
   useEffect(() => {
     fetch(`/api/courses/${courseName}`)
@@ -33,6 +33,7 @@ function CourseDetail(): JSX.Element {
       .then((course) => setCourse(course));
   }, []);
 
+  const [choice, setChoice] = useLocalStorage<Choice>("choiceObject", {});
   function handleClick() {
     if (
       (priority === "primary" ||
@@ -40,9 +41,9 @@ function CourseDetail(): JSX.Element {
         priority === "tertiary") &&
       courseName
     ) {
-      const updatedCourse = { ...course };
-      updatedCourse[priority] = { name: courseName };
-      setCourse(updatedCourse);
+      const updatedChoice = { ...choice };
+      updatedChoice[priority] = { name: courseName };
+      setChoice(updatedChoice);
     }
   }
 
