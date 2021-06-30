@@ -6,7 +6,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import CourseCard from "../../components/CourseCards/CourseCard";
 import useQuery from "../../hooks/useQuery";
 import styles from "./CourseOverview.module.css";
-import { CourseData } from "../../../types";
+import { Courses } from "../../../types";
 type Priorities = {
   [key: string]: { icon: JSX.Element } | undefined;
 };
@@ -20,7 +20,7 @@ function CourseOverview(): JSX.Element {
   const query = useQuery();
   const priority = query.get("priority");
 
-  const [courses, setCourses] = useState<CourseData[]>([]);
+  const [courses, setCourses] = useState<Courses[]>([]);
   useEffect(() => {
     fetch("/api/courses")
       .then((response) => response.json())
@@ -40,9 +40,9 @@ function CourseOverview(): JSX.Element {
           {courses.map((course) => (
             <CourseCard
               imgSrc={course.image}
-              headline={course.courseDescShort}
+              headline={course.descShort}
               priority={priority}
-              coursename={course.courseName}
+              courseName={course.name}
             />
           ))}
         </div>

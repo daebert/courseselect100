@@ -3,7 +3,7 @@ import CourseChoiceBlock from "../../components/CourseChoiceBlock/CourseChoiceBl
 import HowToButton from "../../components/HowToButton/HowToButton";
 import MainButton from "../../components/MainButton/MainButton";
 import styles from "./Dashboard.module.css";
-import parseChoiceFromLocalStorage from "../../../utils/parseFromLocalStorage";
+import parseChoiceFromLocalStorage from "../../utils/parseFromLocalStorage";
 import { saveChoiceData } from "../../api/choices";
 
 function Home(): JSX.Element {

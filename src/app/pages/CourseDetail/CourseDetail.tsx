@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CourseData } from "../../../types";
+import { Courses } from "../../../types";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
@@ -24,7 +24,7 @@ function CourseDetail(): JSX.Element {
   const priority = query.get("priority");
   const courseName = query.get("coursename");
 
-  const [course, setCourse] = useState<CourseData | null>(null);
+  const [course, setCourse] = useState<Courses | null>(null);
   useEffect(() => {
     fetch(`/api/courses/${courseName}`)
       .then((response) => response.json())
@@ -61,7 +61,7 @@ function CourseDetail(): JSX.Element {
           {course !== null ? (
             <CourseDetailHeader
               imgSrc={course.image}
-              name={course.courseDescShort}
+              name={course.descShort}
               instructor={course.instructor}
             />
           ) : (
@@ -70,7 +70,7 @@ function CourseDetail(): JSX.Element {
         </span>
       </header>
       <main className={styles.main}>
-        <LongDesc children={course?.courseDescLong} />
+        <LongDesc children={course?.descLong} />
       </main>
       <footer>
         <MainButton onClick={handleClick} route="/dashboard">

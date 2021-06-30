@@ -1,7 +1,6 @@
 import React from "react";
 import CourseChoice from "../CourseChoice/CourseChoice";
 import styles from "./CourseChoiceBlock.module.css";
-// import parseChoiceFromLocalStorage from "../../../utils/parseFromLocalStorage";
 
 type Choice = {
   primary: {
