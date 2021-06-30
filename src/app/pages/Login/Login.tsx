@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Login.module.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/icons/Logo";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
 
 function Login(): JSX.Element {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className={styles.container}>
       <header className={styles.logo}>
@@ -12,8 +14,18 @@ function Login(): JSX.Element {
       </header>
       <main>
         <form className={styles.form}>
-          <LabeledInput placeholder="E-Mail" type="email" value="" />
-          <LabeledInput placeholder="Password" type="password" value="" />
+          <LabeledInput
+            placeholder="E-Mail"
+            type="email"
+            value={email}
+            onChange={setEmail}
+          />
+          <LabeledInput
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={setPassword}
+          />
           <span className={styles.form__text}>Passwort vergessen?</span>
           <Link to="/dashboard" className={styles.link}>
             Login
