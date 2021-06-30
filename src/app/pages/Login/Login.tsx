@@ -10,17 +10,15 @@ function Login(): JSX.Element {
       <header className={styles.logo}>
         <Logo />
       </header>
-      <main className={styles.main}>
-        <LabeledInput
-          placeholder="E-Mail"
-          type="email"
-          value="hannes.hoch@web.de"
-        />
-        <LabeledInput placeholder="Password" type="password" value="password" />
-        <span className={styles.main__text}>Passwort vergessen?</span>
-        <Link to="/dashboard" className={styles.link}>
-          Login
-        </Link>
+      <main>
+        <form className={styles.form}>
+          <LabeledInput placeholder="E-Mail" type="email" value="" />
+          <LabeledInput placeholder="Password" type="password" value="" />
+          <span className={styles.form__text}>Passwort vergessen?</span>
+          <Link to="/dashboard" className={styles.link}>
+            Login
+          </Link>
+        </form>
       </main>
       <footer className={styles.footer}>
         <span>Noch kein Nutzerkonto?</span>
