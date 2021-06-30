@@ -12,7 +12,7 @@ export default function ClassBall({ num: num }: ClassBallProps): JSX.Element {
       height="25"
       viewBox="0 0 25 25"
     >
-      {num && (
+      {
         <g
           fill={num ? "var(--primary-color)" : "none"}
           stroke="var(--primary-color)"
@@ -21,7 +21,7 @@ export default function ClassBall({ num: num }: ClassBallProps): JSX.Element {
           <circle cx="12.5" cy="12.5" r="12.5" stroke="none" />
           <circle cx="12.5" cy="12.5" r="12" fill="none" />
         </g>
-      )}
+      }
       {num && (
         <text
           transform="translate(12 19)"

@@ -31,10 +31,12 @@ POST http://localhost:3300/api/courses HTTP/1.1
 Content-Type: application/json
 
 {
-    "courseName": "Test9",
-    "courseDescShort": "Test9",
-    "courseDescLong": "Test9"
-     }
+    "courseName": "Wir für eine lebenswerte Zukunft!",
+    "courseDescShort": "Wir für eine lebenswerte Zukunft! - Die 17 Ziele der Nachhaltigkeit hautnah.",
+    "courseDescLong": "Wie können wir die Welt gerechter und nachhaltiger  gestalten? Was können wir zu positiven Veränderungen beitragen? Dieser Workshop richtet sich an alle Schüler/innen mit Interesse an globalen Themen und Zusammenhängen, die Lust darauf haben, über den Tellerrand zu blicken, das Selbstverständliche zu hinterfragen und die Perspektive zu wechseln.  Wir werden uns mit der Bedeutung globaler nachhaltiger Entwicklung und dem Nutzen gemeinsamer Ziele auseinandersetzen. Mit interaktiven Methoden und Spielen lernen wir die Agenda 2030 und ihre 17 Ziele für globale Nachhaltigkeit näher kennen und setzten sie konkret um: Die Agenda 2030: Was soll das überhaupt? Planspiel Palmöl: Nachhaltigkeitsziele konkret! Schokoladencreme selbst gemacht – ohne Palmöl aber super lecker!", 
+    "instructor": "Franka Ferkel"
+
+ }
 
 
   

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Choice, CourseData } from "../../../types";
+import { Choice, Courses } from "../../../types";
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
@@ -23,15 +23,15 @@ const priorities: Priorities = {
 function CourseDetail(): JSX.Element {
   const query = useQuery();
   const priority = query.get("priority");
-  const courseName = query.get("coursename");
+  const title = query.get("title");
 
-  const [course, setCourse] = useState<CourseData | null>(null);
-
+  const [course, setCourse] = useState<Courses | null>(null);
   useEffect(() => {
-    fetch(`/api/courses/${courseName}`)
+    fetch(`/api/courses/${title}`)
       .then((response) => response.json())
       .then((course) => setCourse(course));
   }, []);
+
 
   const [choice, setChoice] = useLocalStorage<Choice>("choiceObject", {});
   function handleClick() {
@@ -55,11 +55,12 @@ function CourseDetail(): JSX.Element {
         </span>
         {priority && <span>{priorities[priority]?.icon}</span>}
         <span className={styles.courseName}>
+          {console.log(course)}
           {course !== null ? (
             <CourseDetailHeader
-              imgSrc="images/basketball.png"
-              name={course.courseName}
-              instructor={course.courseDescShort}
+              imgSrc={course.image}
+              name={course.descShort}
+              instructor={course.instructor}
             />
           ) : (
             <div>Daten nicht da!</div>
@@ -67,7 +68,7 @@ function CourseDetail(): JSX.Element {
         </span>
       </header>
       <main className={styles.main}>
-        <LongDesc children={course?.courseDescLong} />
+        <LongDesc children={course?.descLong} />
       </main>
       <footer>
         <MainButton onClick={handleClick} route="/dashboard">
