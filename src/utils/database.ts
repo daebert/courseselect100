@@ -1,5 +1,5 @@
 import { Collection, MongoClient } from "mongodb";
-import { Choice, CourseData } from "../types";
+import { Choice, Courses } from "../types";
 
 let client: MongoClient;
 
@@ -19,8 +19,8 @@ export const getCollection = <T>(name: string): Collection<T> => {
   return client.db().collection<T>(name);
 };
 
-export const getCourseDataCollection = (): Collection<CourseData> => {
-  return getCollection<CourseData>("coursedata");
+export const getCourseDataCollection = (): Collection<Courses> => {
+  return getCollection<Courses>("coursedata");
 };
 
 export const getChoiceDataCollection = (): Collection<Choice> => {

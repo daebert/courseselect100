@@ -1,13 +1,13 @@
-import type { Choice, CourseData } from "../types";
+import type { Choice, Courses } from "../types";
 import { getChoiceDataCollection, getCourseDataCollection } from "./database";
 
-export const readCourseData = async (): Promise<CourseData[]> => {
+export const readCourseData = async (): Promise<Courses[]> => {
   return await getCourseDataCollection().find().sort({ service: 1 }).toArray();
 };
 
 export const readSingleCourseData = async (
   courseName: string
-): Promise<CourseData> => {
+): Promise<Courses> => {
   const singleCourseData = await getCourseDataCollection().findOne({
     courseName,
   });
@@ -17,7 +17,7 @@ export const readSingleCourseData = async (
   return singleCourseData;
 };
 
-export const saveCourseData = async (coursedata: CourseData): Promise<void> => {
+export const saveCourseData = async (coursedata: Courses): Promise<void> => {
   await getCourseDataCollection().insertOne({
     ...coursedata,
   });
