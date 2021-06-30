@@ -6,6 +6,7 @@ type LabeledInputProps = {
   value: string | number;
   type?: string;
   required?: boolean;
+  onChange: (value: string) => void;
 };
 
 function LabeledInput({
@@ -13,6 +14,7 @@ function LabeledInput({
   value,
   type,
   required,
+  onChange,
 }: LabeledInputProps): JSX.Element {
   return (
     <label className={styles.container}>
@@ -22,6 +24,7 @@ function LabeledInput({
         type={type}
         value={value}
         required={required}
+        onChange={(e) => onChange(e.target.value)}
       />
     </label>
   );
