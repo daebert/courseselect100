@@ -42,7 +42,7 @@ function CourseOverview(): JSX.Element {
               imgSrc={course.image}
               headline={course.descShort}
               priority={priority}
-              courseName={course.name}
+              title={course.title}
             />
           ))}
         </div>

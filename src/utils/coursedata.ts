@@ -5,14 +5,12 @@ export const readCourseData = async (): Promise<Courses[]> => {
   return await getCourseDataCollection().find().sort({ service: 1 }).toArray();
 };
 
-export const readSingleCourseData = async (
-  courseName: string
-): Promise<Courses> => {
+export const readSingleCourseData = async (title: string): Promise<Courses> => {
   const singleCourseData = await getCourseDataCollection().findOne({
-    courseName,
+    title,
   });
   if (!singleCourseData) {
-    throw new Error(`Course does not exist: ${courseName}`);
+    throw new Error(`Course does not exist: ${title}`);
   }
   return singleCourseData;
 };

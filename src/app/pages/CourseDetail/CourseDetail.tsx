@@ -22,14 +22,16 @@ const priorities: Priorities = {
 function CourseDetail(): JSX.Element {
   const query = useQuery();
   const priority = query.get("priority");
-  const courseName = query.get("coursename");
+  const title = query.get("title");
 
   const [course, setCourse] = useState<Courses | null>(null);
   useEffect(() => {
-    fetch(`/api/courses/${courseName}`)
+    fetch(`/api/courses/${title}`)
       .then((response) => response.json())
       .then((course) => setCourse(course));
   }, []);
+
+  console.log(course);
 
   function handleClick() {
     function parseChoiceFromLocalStorage() {
@@ -44,7 +46,7 @@ function CourseDetail(): JSX.Element {
     const choiceObject = parseChoiceFromLocalStorage();
 
     if (priority) {
-      choiceObject[priority] = { name: courseName };
+      choiceObject[priority] = { name: title };
     }
 
     localStorage.setItem("choiceObject", JSON.stringify(choiceObject));
@@ -58,6 +60,7 @@ function CourseDetail(): JSX.Element {
         </span>
         {priority && <span>{priorities[priority]?.icon}</span>}
         <span className={styles.courseName}>
+          {console.log(course)}
           {course !== null ? (
             <CourseDetailHeader
               imgSrc={course.image}
