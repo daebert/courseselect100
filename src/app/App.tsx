@@ -14,9 +14,9 @@ type CustomRouteProps = RouteProps & {
 
 const routes: CustomRouteProps[] = [
   { path: "/", Component: Login, exact: true },
-  { path: "/dashboard", Component: Dashboard, exact: true },
-  { path: "/overview/", Component: CourseOverview },
-  { path: "/detail/", Component: CourseDetail },
+  { path: "/dashboard", Component: Dashboard },
+  { path: "/overview", Component: CourseOverview },
+  { path: "/detail", Component: CourseDetail },
   { path: "/confirm", Component: Confirm },
 ];
 
