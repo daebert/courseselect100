@@ -9,7 +9,7 @@ import ChoiceLink from "../ChoiceLink/ChoiceLink";
 type CourseChoiceProps = {
   priority: "primary" | "secondary" | "tertiary";
   name: string;
-  setName: (priority: string, name: string) => void;
+  onDeleteClick: () => void;
 };
 
 const priorities = {
@@ -21,13 +21,13 @@ const priorities = {
 function CourseChoice({
   priority,
   name,
-  setName,
+  onDeleteClick,
 }: CourseChoiceProps): JSX.Element {
   return (
     <div className={styles.courseChoice}>
       <span>{priorities[priority].icon}</span>
       {name ? (
-        <CourseChoiceChosen name={name} setName={setName} priority={priority} />
+        <CourseChoiceChosen name={name} onDeleteClick={onDeleteClick} />
       ) : (
         <ChoiceLink link={`/overview?priority=${priority}`} />
       )}

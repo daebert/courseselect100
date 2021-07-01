@@ -30,8 +30,8 @@ function CourseChoiceBlock(): JSX.Element {
   });
   function setName(prio: string, name: string) {
     setChoice({
-      [prio]: { name: name },
       ...choice,
+      [prio]: { name: name },
     });
   }
   return (
@@ -39,17 +39,17 @@ function CourseChoiceBlock(): JSX.Element {
       <CourseChoice
         priority="primary"
         name={choice.primary?.name}
-        setName={setName}
+        onDeleteClick={() => setName("primary", "")}
       />
       <CourseChoice
         priority="secondary"
         name={choice.secondary?.name}
-        setName={setName}
+        onDeleteClick={() => setName("secondary", "")}
       />
       <CourseChoice
         priority="tertiary"
         name={choice.tertiary?.name}
-        setName={setName}
+        onDeleteClick={() => setName("tertiary", "")}
       />
     </div>
   );
