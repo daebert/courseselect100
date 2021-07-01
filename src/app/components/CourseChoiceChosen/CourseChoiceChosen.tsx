@@ -4,13 +4,17 @@ import styles from "./CourseChoiceChosen.module.css";
 
 type CourseChoiceChosenProps = {
   name: string;
+  onDeleteClick: () => void;
 };
 
-function CourseChoiceChosen({ name }: CourseChoiceChosenProps): JSX.Element {
+function CourseChoiceChosen({
+  name,
+  onDeleteClick,
+}: CourseChoiceChosenProps): JSX.Element {
   return (
     <div className={styles.courseChoiceChosen}>
       <span>{name}</span>
-      <BinIcon />
+      <BinIcon onClick={onDeleteClick} />
     </div>
   );
 }

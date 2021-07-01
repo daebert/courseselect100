@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Courses } from "../../../types";
+import { Choice, Courses } from "../../../types";
+
 import PrimPrioBall from "../../assets/icons/PrimPrioBall";
 import SecPrioBall from "../../assets/icons/SecPrioBall";
 import ThirdPrioBall from "../../assets/icons/ThirdPrioBall";
@@ -7,6 +8,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import CourseDetailHeader from "../../components/CourseDetailHeader/CourseDetailHeader";
 import LongDesc from "../../components/LongDesc/LongDesc";
 import MainButton from "../../components/MainButton/MainButton";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import useQuery from "../../hooks/useQuery";
 import styles from "./CourseDetail.module.css";
 
@@ -24,32 +26,26 @@ function CourseDetail(): JSX.Element {
   const priority = query.get("priority");
   const title = query.get("title");
 
-  const [course, setCourse] = useState<Courses | null>(null);
+  const [course, setCourse] = useState<CourseData | null>(null);
   useEffect(() => {
     fetch(`/api/courses/${title}`)
       .then((response) => response.json())
       .then((course) => setCourse(course));
   }, []);
 
-  console.log(course);
 
+  const [choice, setChoice] = useLocalStorage<Choice>("choiceObject", {});
   function handleClick() {
-    function parseChoiceFromLocalStorage() {
-      const json = localStorage.getItem("choiceObject");
-      if (json === null) {
-        return {};
-      }
-      const data = JSON.parse(json);
-      return data;
+    if (
+      (priority === "primary" ||
+        priority === "secondary" ||
+        priority === "tertiary") &&
+      courseName
+    ) {
+      const updatedChoice = { ...choice };
+      updatedChoice[priority] = { name: courseName };
+      setChoice(updatedChoice);
     }
-
-    const choiceObject = parseChoiceFromLocalStorage();
-
-    if (priority) {
-      choiceObject[priority] = { name: title };
-    }
-
-    localStorage.setItem("choiceObject", JSON.stringify(choiceObject));
   }
 
   return (

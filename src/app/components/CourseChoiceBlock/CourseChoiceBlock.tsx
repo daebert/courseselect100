@@ -1,6 +1,7 @@
 import React from "react";
 import CourseChoice from "../CourseChoice/CourseChoice";
 import styles from "./CourseChoiceBlock.module.css";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 type Choice = {
   primary: {
@@ -14,32 +15,41 @@ type Choice = {
   };
 };
 
-function parseChoiceFromLocalStorage(): Choice {
-  const json = localStorage.getItem("choiceObject");
-  if (json === null) {
-    return {
-      primary: {
-        name: "",
-      },
-      secondary: {
-        name: "",
-      },
-      tertiary: {
-        name: "",
-      },
-    };
-  }
-  const data = JSON.parse(json);
-  return data;
-}
-
 function CourseChoiceBlock(): JSX.Element {
-  const choiceObject = parseChoiceFromLocalStorage();
+  const [choice, setChoice] = useLocalStorage<Choice>("choiceObject", {
+    primary: {
+      name: "",
+    },
+    secondary: {
+      name: "",
+    },
+    tertiary: {
+      name: "",
+    },
+  });
+  function setName(prio: string, name: string) {
+    setChoice({
+      ...choice,
+      [prio]: { name: name },
+    });
+  }
   return (
     <div className={styles.courseChoiceBlock}>
-      <CourseChoice priority="primary" name={choiceObject.primary?.name} />
-      <CourseChoice priority="secondary" name={choiceObject.secondary?.name} />
-      <CourseChoice priority="tertiary" name={choiceObject.tertiary?.name} />
+      <CourseChoice
+        priority="primary"
+        name={choice.primary?.name}
+        onDeleteClick={() => setName("primary", "")}
+      />
+      <CourseChoice
+        priority="secondary"
+        name={choice.secondary?.name}
+        onDeleteClick={() => setName("secondary", "")}
+      />
+      <CourseChoice
+        priority="tertiary"
+        name={choice.tertiary?.name}
+        onDeleteClick={() => setName("tertiary", "")}
+      />
     </div>
   );
 }

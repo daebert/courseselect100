@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function useLocalStorage<T>(
   key: string,
   initialValue: T
@@ -22,4 +23,5 @@ function useLocalStorage<T>(
   };
   return [storedValue, setValue];
 }
+
 export default useLocalStorage;
