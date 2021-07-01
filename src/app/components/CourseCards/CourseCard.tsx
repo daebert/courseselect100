@@ -7,6 +7,7 @@ type CourseCardProps = {
   headline: string;
   priority: string | null;
   title: string;
+  disabled: boolean;
 };
 
 function CourseCard({
@@ -14,17 +15,18 @@ function CourseCard({
   imgSrc,
   priority,
   title,
+  disabled,
 }: CourseCardProps): JSX.Element {
   return (
-    <Link
-      to={`/detail?priority=${priority}&title=${title}`}
-      className={styles.courseCard__link}
-    >
-      <div className={styles.courseCard}>
+    <button className={styles.courseCard__link} disabled={disabled}>
+      <Link
+        to={`/detail?priority=${priority}&title=${title}`}
+        className={styles.courseCard}
+      >
         <img className={styles.courseCard__img} src={imgSrc} />
         <h3 className={styles.courseCard__headline}>{headline}</h3>
-      </div>
-    </Link>
+      </Link>
+    </button>
   );
 }
 
