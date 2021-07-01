@@ -1,34 +1,25 @@
 .courseCard {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 2em auto;
   column-gap: 1em;
   width: 90%;
   margin: 0 auto;
-  background-color: #f2edfe;
+  background-color: var(--background-color);
   border-radius: 1em;
-  border: 0.1em solid var(--primary-border-color);
 }
 
 .courseCard__img {
   grid-column: 1;
-  grid-row: 1 / 3;
   width: 100%;
   height: 6em;
   margin: 0.5em 0 0.5em 0.5em;
-  border-radius: 1em 0 0 1em;
+  border-radius: 1em;
+  object-fit: cover;
 }
 
 .courseCard__headline {
-  grid-row: 1;
   color: var(--text-color);
-  margin: 0.5em 0 0 0;
-  font-size: 1em;
-}
-
-.courseCard__body {
-  grid-row: 2;
-  color: var(--text-color);
+  margin: auto 0;
   font-size: 1em;
 }
 

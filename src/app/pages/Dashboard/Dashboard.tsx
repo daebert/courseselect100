@@ -2,8 +2,8 @@ import React from "react";
 import CourseChoiceBlock from "../../components/CourseChoiceBlock/CourseChoiceBlock";
 import HowToButton from "../../components/HowToButton/HowToButton";
 import MainButton from "../../components/MainButton/MainButton";
-import styles from "./Home.module.css";
-import parseChoiceFromLocalStorage from "../../../utils/parseFromLocalStorage";
+import styles from "./Dashboard.module.css";
+import parseChoiceFromLocalStorage from "../../utils/parseFromLocalStorage";
 import { saveChoiceData } from "../../api/choices";
 
 function Home(): JSX.Element {

@@ -13,10 +13,8 @@ router.get("/courses", async (_request, response) => {
   response.json(coursedata);
 });
 
-router.get("/courses/:courseName", async (request, response) => {
-  const singleCourseData = await readSingleCourseData(
-    request.params.courseName
-  );
+router.get("/courses/:title", async (request, response) => {
+  const singleCourseData = await readSingleCourseData(request.params.title);
   response.json(singleCourseData);
 });
 
