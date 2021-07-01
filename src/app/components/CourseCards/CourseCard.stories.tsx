@@ -12,5 +12,6 @@ export const Basketball = (): JSX.Element => (
     headline="Basketball"
     priority="high"
     title="Hello"
+    disabled={true}
   />
 );
