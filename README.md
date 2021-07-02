@@ -1,100 +1,79 @@
-# Name of the project
+# Course Selector
 
-> Additional information or tag line
+The app offers a selection of educational projects. Students select 3 projects from this list and assign a personal priority to each course. After the selection process, the app will automatically compare the selection and priorities with the course offering and make an allocation of the courses.
 
-A brief description of your project, what it is used for.
-git
+![Bildschirmfoto 2021-07-02 um 14 02 27](https://user-images.githubusercontent.com/81586917/124271790-2d560700-db3e-11eb-99f6-ba90e348a368.png)
+
+Demo
+Here you can view and test the app:
+
+[Adobe XD](https://xd.adobe.com/view/f693011c-fb0e-4834-82f2-bc90ec3abd81-a3c0/)
+
+[Heroku](https://courseselect100.herokuapp.com/)
+
+The app is currently only supported as a mobile version.
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+In the project directory, you can run:
 
-```shell
-commands here
+`npm start`
+
+Runs the server in production mode and serve production bundle from npm run build
+
+`npm run dev:client`
+
+Runs the app in development mode. Open http://localhost:3000 (default PORT) to view it in the browser. The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
+
+```
+npm run dev:server
 ```
 
-Here you should say what actually happens when you execute the code above.
+Runs the server in development mode.
+
+```
+npm run build
+```
+
+Builds the app for production to the dist folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app is ready to be deployed.
 
 ## Developing
 
 ### Built With
 
-List main libraries, frameworks used including versions (React, Angular etc...)
+- React.js
+- Node.js
+- mongodb
+- TypeScript
+- storybook
 
 ### Prerequisites
 
-What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
+None needed, just install the dependencies with `npm install`
 
 ### Setting up Dev
 
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
+If you want to add or change something, feel free to do....
 
-```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
+```git clone git@github.com:daebert/courseselect100.git
+cd courseselect100/
+npm install
+npm run dev
 ```
-
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-
-give instructions on how to build and release a new version
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy your-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
-
-## Versioning
-
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when using the project.
 
 ## Tests
 
-Describe and show how to run the tests with code examples.
-Explain what these tests test and why.
+No tests implemented yet.
 
-```shell
-Give an example
-```
+## Project Dependencies
 
-## Style guide
-
-Explain your code style and show how to check it.
-
-## Api Reference
-
-If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
-
-## Database
-
-Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc...
-
-## Licensing
-
-State what the license is and how to find the text version of the license.
+- https://nextjs.org/learn/excel/typescript
+- https://prettier.io/docs/en/install.html
+- https://eslint.org/docs/user-guide/getting-started
+- https://github.com/prettier/eslint-config-prettier
+- https://stylelint.io/user-guide/get-started
+- https://github.com/prettier/stylelint-config-prettier
+- https://storybook.js.org/docs/react/get-started/install
+- https://www.npmjs.com/package/storybook-css-modules-preset
+- https://expressjs.com/
+- [TypeScript for custom server + nodemon](https://github.com/vercel/next.js/tree/canary/examples/custom-server-typescript)
