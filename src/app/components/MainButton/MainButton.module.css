@@ -9,7 +9,7 @@
   padding: 1em 1.5em;
 }
 
-:disabled {
+.button:disabled {
   color: #afa1bf;
   opacity: 0.3;
   cursor: default;

@@ -19,6 +19,8 @@
 .main {
   width: 90%;
   margin: auto;
+  display: grid;
+  row-gap: 1.5em;
 }
 
 .h1 {

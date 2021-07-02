@@ -8,9 +8,10 @@ export default {
 
 export const Basketball = (): JSX.Element => (
   <CourseCard
-    imgSrc="/images/basketball.png"
-    headline="Basketball"
+    img="/images/basketball.png"
+    text="Basketball"
     priority="high"
     title="Hello"
+    disabled={true}
   />
 );

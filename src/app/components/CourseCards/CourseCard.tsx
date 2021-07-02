@@ -1,30 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./CourseCard.module.css";
+import { useHistory } from "react-router-dom";
 
 type CourseCardProps = {
-  imgSrc: string;
-  headline: string;
+  img: string;
+  text: string;
   priority: string | null;
   title: string;
+  disabled: boolean;
 };
 
 function CourseCard({
-  headline,
-  imgSrc,
+  text,
+  img,
   priority,
   title,
+  disabled,
 }: CourseCardProps): JSX.Element {
+  const history = useHistory();
   return (
-    <Link
-      to={`/detail?priority=${priority}&title=${title}`}
-      className={styles.courseCard__link}
+    <button
+      className={styles.courseCard}
+      disabled={disabled}
+      onClick={() =>
+        history.push(`/detail?priority=${priority}&title=${title}`)
+      }
     >
-      <div className={styles.courseCard}>
-        <img className={styles.courseCard__img} src={imgSrc} />
-        <h3 className={styles.courseCard__headline}>{headline}</h3>
-      </div>
-    </Link>
+      <img className={styles.courseCard__img} src={img} />
+      <div className={styles.courseCard__text}>{text}</div>
+    </button>
   );
 }
 

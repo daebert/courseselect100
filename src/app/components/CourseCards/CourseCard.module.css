@@ -6,6 +6,13 @@
   margin: 0 auto;
   background-color: var(--background-color);
   border-radius: 1em;
+  border: none;
+}
+
+.courseCard:disabled {
+  background-color: var (--primary-color);
+  opacity: 0.3;
+  cursor: default;
 }
 
 .courseCard__img {
@@ -17,12 +24,7 @@
   object-fit: cover;
 }
 
-.courseCard__headline {
+.courseCard__text {
   color: var(--text-color);
   margin: auto 0;
-  font-size: 1em;
-}
-
-.courseCard__link {
-  text-decoration: none;
 }

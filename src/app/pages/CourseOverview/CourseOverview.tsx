@@ -7,6 +7,7 @@ import CourseCard from "../../components/CourseCards/CourseCard";
 import useQuery from "../../hooks/useQuery";
 import styles from "./CourseOverview.module.css";
 import { Courses } from "../../../types";
+import parseChoiceFromLocalStorage from "../../utils/parseFromLocalStorage";
 type Priorities = {
   [key: string]: { icon: JSX.Element } | undefined;
 };
@@ -27,6 +28,8 @@ function CourseOverview(): JSX.Element {
       .then((courses) => setCourses(courses));
   }, []);
 
+  const choiceObject = parseChoiceFromLocalStorage();
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -39,10 +42,15 @@ function CourseOverview(): JSX.Element {
         <div className={styles.cards}>
           {courses.map((course) => (
             <CourseCard
-              imgSrc={course.image}
-              headline={course.descShort}
+              img={course.image}
+              text={course.descShort}
               priority={priority}
               title={course.title}
+              disabled={
+                course.title === choiceObject.primary?.name ||
+                course.title === choiceObject.secondary?.name ||
+                course.title === choiceObject.tertiary?.name
+              }
             />
           ))}
         </div>
