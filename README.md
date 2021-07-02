@@ -78,4 +78,4 @@ No tests implemented yet.
 * (https://storybook.js.org/docs/react/get-started/install)
 * (https://www.npmjs.com/package/storybook-css-modules-preset)
 * (https://expressjs.com/)
-* (TypeScript for custom server + nodemon)
+* [TypeScript for custom server + nodemon] (https://github.com/vercel/next.js/tree/canary/examples/custom-server-typescript)
