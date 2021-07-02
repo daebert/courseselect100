@@ -8,6 +8,7 @@ Demo
 Here you can view and test the app:
 
 [Adobe XD](https://xd.adobe.com/view/f693011c-fb0e-4834-82f2-bc90ec3abd81-a3c0/)
+
 [Heroku](https://courseselect100.herokuapp.com/)
 
 The app is currently only supported as a mobile version.
@@ -69,13 +70,13 @@ No tests implemented yet.
 
 ## Project Dependencies
 
-* (https://nextjs.org/learn/excel/typescript)
-* (https://prettier.io/docs/en/install.html)
-* (https://eslint.org/docs/user-guide/getting-started)
-* (https://github.com/prettier/eslint-config-prettier)
-* (https://stylelint.io/user-guide/get-started)
-* (https://github.com/prettier/stylelint-config-prettier)
-* (https://storybook.js.org/docs/react/get-started/install)
-* (https://www.npmjs.com/package/storybook-css-modules-preset)
-* (https://expressjs.com/)
-* [TypeScript for custom server + nodemon] (https://github.com/vercel/next.js/tree/canary/examples/custom-server-typescript)
+* https://nextjs.org/learn/excel/typescript
+* https://prettier.io/docs/en/install.html
+* https://eslint.org/docs/user-guide/getting-started
+* https://github.com/prettier/eslint-config-prettier
+* https://stylelint.io/user-guide/get-started
+* https://github.com/prettier/stylelint-config-prettier
+* https://storybook.js.org/docs/react/get-started/install
+* https://www.npmjs.com/package/storybook-css-modules-preset
+* https://expressjs.com/
+* [TypeScript for custom server + nodemon](https://github.com/vercel/next.js/tree/canary/examples/custom-server-typescript)
