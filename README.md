@@ -18,13 +18,11 @@ The app is currently only supported as a mobile version.
 
 In the project directory, you can run:
 
-```npm start
-```
+```npm start```
 
 Runs the server in production mode and serve production bundle from npm run build
 
-```npm run dev:client
-```
+```npm run dev:client```
 
 Runs the app in development mode. Open http://localhost:3000 (default PORT) to view it in the browser. The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
 
