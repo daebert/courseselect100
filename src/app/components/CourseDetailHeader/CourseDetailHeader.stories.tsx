@@ -9,7 +9,7 @@ export default {
 export const Header = (): JSX.Element => (
   <CourseDetailHeader
     imgSrc="images/basketball.png"
-    name="Test"
-    instructor="Test"
+    name="Probe"
+    instructor="Probe"
   />
 );
