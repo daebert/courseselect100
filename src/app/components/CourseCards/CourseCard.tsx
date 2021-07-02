@@ -3,16 +3,16 @@ import styles from "./CourseCard.module.css";
 import { useHistory } from "react-router-dom";
 
 type CourseCardProps = {
-  imgSrc: string;
-  headline: string;
+  img: string;
+  text: string;
   priority: string | null;
   title: string;
   disabled: boolean;
 };
 
 function CourseCard({
-  headline,
-  imgSrc,
+  text,
+  img,
   priority,
   title,
   disabled,
@@ -20,14 +20,14 @@ function CourseCard({
   const history = useHistory();
   return (
     <button
-      className={styles.courseCard__link}
+      className={styles.courseCard}
       disabled={disabled}
       onClick={() =>
         history.push(`/detail?priority=${priority}&title=${title}`)
       }
     >
-      <img className={styles.courseCard__img} src={imgSrc} />
-      <h3 className={styles.courseCard__headline}>{headline}</h3>
+      <img className={styles.courseCard__img} src={img} />
+      <div className={styles.courseCard__text}>{text}</div>
     </button>
   );
 }

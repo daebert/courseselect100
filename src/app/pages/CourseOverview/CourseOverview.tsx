@@ -42,8 +42,8 @@ function CourseOverview(): JSX.Element {
         <div className={styles.cards}>
           {courses.map((course) => (
             <CourseCard
-              imgSrc={course.image}
-              headline={course.descShort}
+              img={course.image}
+              text={course.descShort}
               priority={priority}
               title={course.title}
               disabled={
