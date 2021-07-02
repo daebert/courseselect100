@@ -2,7 +2,8 @@
 
 The app offers a selection of educational projects. Students select 3 projects from this list and assign a personal priority to each course. After the selection process, the app will automatically compare the selection and priorities with the course offering and make an allocation of the courses.
 
-![Bildschirmfoto 2021-07-02 um 12 15 12](https://user-images.githubusercontent.com/81586917/124262008-c894af80-db31-11eb-9c99-d20f9a729863.png)
+![Bildschirmfoto 2021-07-02 um 13 57 49](https://user-images.githubusercontent.com/81586917/124271621-f7b11e00-db3d-11eb-874b-3013e4406827.png)
+
 
 Demo
 Here you can view and test the app:
