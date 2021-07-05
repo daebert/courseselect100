@@ -17,43 +17,22 @@ The app is currently only supported as a mobile version.
 
 ## Installing / Getting started
 
-In the project directory, you can run:
+First, install dependencies: `npm install`
 
-```npm start```
+In the project directory, you can then run:
 
-Runs the server in production mode and serve production bundle from npm run build
+`npm run build` : Builds the app for production to the dist folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.
 
-```npm run client:dev```
+`npm start` : Runs the server in production mode and serve production bundle from npm run build
 
-Runs the app in development mode. Open http://localhost:3000 (default PORT) to view it in the browser. The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
+`npm run server:dev` : Runs the server in development mode.
 
-```
-npm run server:dev
-````
-
-Runs the server in development mode.
-
-```
-npm run build
-```
-
-Builds the app for production to the dist folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app is ready to be deployed.
+`npm run client:dev` : Runs the app in development mode.
+Open http://localhost:3000 (default PORT) to view it in the browser.
+The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
 
 
-
-## Developing
-
-### Built With
-
-* React.js
-* Node.js
-* mongodb
-* TypeScript
-* storybook
-
-### Prerequisites
-
-None needed, just install the dependencies with ```npm install```
 
 ### Setting up Dev
 
