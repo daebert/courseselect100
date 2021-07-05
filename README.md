@@ -70,15 +70,21 @@ npm run dev
 No tests implemented yet.
 
 ## Tech Stack
-
-
-* https://nextjs.org/learn/excel/typescript
-* https://prettier.io/docs/en/install.html
-* https://eslint.org/docs/user-guide/getting-started
-* https://github.com/prettier/eslint-config-prettier
-* https://stylelint.io/user-guide/get-started
-* https://github.com/prettier/stylelint-config-prettier
-* https://storybook.js.org/docs/react/get-started/install
-* https://www.npmjs.com/package/storybook-css-modules-preset
-* https://expressjs.com/
-* [TypeScript for custom server + nodemon](https://github.com/vercel/next.js/tree/canary/examples/custom-server-typescript)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React Router](https://reactrouter.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Express.js](http://expressjs.com/)
+- [Node.js](https://nodejs.org)
+- [Storybook](https://storybook.js.org/)
+- [Heroku](https://www.heroku.com)
+- [dotenv](https://github.com/motdotla/dotenv)
+- [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/)
+- [Husky](https://github.com/typicode/husky)
+- [Lint-Staged](https://github.com/okonet/lint-staged)
+- [Adobe XD](https://www.adobe.com/products/xd.html)
