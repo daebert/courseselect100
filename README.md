@@ -19,7 +19,8 @@ The app is currently only supported as a mobile version.
 
 In the project directory, you can run:
 
-```npm start```
+```npm install
+npm start```
 
 Runs the server in production mode and serve production bundle from npm run build
 
@@ -69,7 +70,8 @@ npm run dev
 
 No tests implemented yet.
 
-## Project Dependencies
+## Tech Stack
+
 
 * https://nextjs.org/learn/excel/typescript
 * https://prettier.io/docs/en/install.html
