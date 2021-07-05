@@ -34,15 +34,6 @@ The page will automatically reload if you make changes to the code. You will see
 
 
 
-### Setting up Dev
-
-If you want to add or change something, feel free to do....
-
-```git clone git@github.com:daebert/courseselect100.git
-cd courseselect100/
-npm install
-npm run dev
-```
 
 ## Build with
 
