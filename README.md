@@ -65,9 +65,10 @@ npm install
 npm run dev
 ```
 
-## Tests
+## Build with
 
-No tests implemented yet.
+<img width="3%" alt="logo" src="https://user-images.githubusercontent.com/81613530/124288016-fb9a6b80-db50-11eb-894b-46220c096ee8.png"
+ /> [React](https://reactjs.org/)
 
 ## Tech Stack
 - [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
