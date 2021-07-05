@@ -19,8 +19,7 @@ The app is currently only supported as a mobile version.
 
 In the project directory, you can run:
 
-```npm install
-npm start```
+```npm start```
 
 Runs the server in production mode and serve production bundle from npm run build
 
