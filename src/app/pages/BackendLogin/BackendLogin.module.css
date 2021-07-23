@@ -1,0 +1,12 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  margin: 3em auto;
+}
