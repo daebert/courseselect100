@@ -1,21 +1,25 @@
 .container {
   height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  margin: 0 auto;
+  grid-template-rows: auto 1fr;
   background-color: var(--primary-color);
+  justify-items: center;
+  row-gap: 6em;
 }
 
 .logo {
   margin: 3em auto;
 }
 
+.main {
+  width: 75%;
+  max-width: 500px;
+}
+
 .form {
   display: grid;
   grid-template-rows: auto auto 20% auto;
   align-items: center;
-  width: 90%;
-  margin: 1em auto;
   row-gap: 0.75em;
 }
 
@@ -37,17 +41,6 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-}
-
-.footer {
-  color: var(--background-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-bottom: 2.5em;
-}
-
-.bold {
-  font-weight: bold;
+  width: 50%;
+  margin: 0 auto;
 }
