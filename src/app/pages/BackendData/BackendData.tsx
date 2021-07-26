@@ -7,11 +7,11 @@ type BackendDataProps = {
   onDeleteClick: () => void;
 };
 
-function BackendData(): JSX.Element {
+function BackendData({ onDeleteClick }: BackendDataProps): JSX.Element {
   return (
     <div className={styles.container}>
       <header>
-        Kursdaten Eingabe <BinIcon />
+        Kursdaten Eingabe <BinIcon onClick={onDeleteClick} />
       </header>
       <main>
         <InputHeadline text={"Kurstitel"} />
