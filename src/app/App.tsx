@@ -7,6 +7,7 @@ import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Confirm from "./pages/Confirm/Confirm";
 import BackendLogin from "./pages/BackendLogin/BackendLogin";
+import BackendData from "./pages/BackendData/BackendData";
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -20,6 +21,7 @@ const routes: CustomRouteProps[] = [
   { path: "/detail", Component: CourseDetail },
   { path: "/confirm", Component: Confirm },
   { path: "/backendlogin", Component: BackendLogin },
+  { path: "/backenddata", Component: BackendData },
 ];
 
 function App(): JSX.Element {
